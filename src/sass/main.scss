@@ -1,7 +1,21 @@
-/*
- * Главный файл стилей.
- * Все паршалы подключаются сюда.
- */
+//===============project's normalization====================//
+@import './vendors/modern-normalize';
+@import './base/reset';
 
-// Стили для файла с примером HTML-фрагмента
-@import './example';
+//===============base and variables========================//
+@import './base/base';
+@import './base/variables';
+
+//===============utility classes==========================//
+@import './layout/container';
+@import './layout/visually-hidden';
+
+//===============project's sections=======================//
+@import './hero-header';
+@import './products';
+@import './about';
+@import './advantages';
+@import './gallery';
+@import './customers-review';
+@import './contacts.scss';
+@import './footer';
