@@ -1,0 +1,31 @@
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0;
+  padding: 0;
+
+  min-width: 161px;
+  min-height: 44px;
+
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+
+  border: 1px solid $clr-bg-the-lightest;
+  border-radius: 20px;
+
+  background-color: $clr-bg-the-lightest;
+  color: $clr-accent;
+
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    border: 1px solid $clr-accent;
+    background-color: $clr-accent;
+    color: $clr-bg-the-lightest;
+  }
+}
