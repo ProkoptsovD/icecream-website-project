@@ -1,11 +1,9 @@
 <header>
     <!-- Див общий для позиционирования контента -->
         <div class="container">
-            <!-- Общая навигация по сайту -->
-            <nav class="nav">
                 <!-- логотип -->
                 <a class="logo" href="#">
-                    <img src="images/logo.png" alt="Логотип компании iceCream">
+                    <img src="images/logo.png" alt="Company`s logo iceCream">
                 </a>
                 <!-- кнопки мобильного меню -->
                 <button type="button" class="menu-button">
@@ -19,22 +17,22 @@
                 <!-- контейнер мобильного меню -->
                 <div class="menu-container">
                     <nav class="nav-header">
-                        <!-- Навигация страниц -->
+                        <!-- Навигация хэддер -->
                         <ul class="nav-header__list">
                             <li class="nav-header__item">
-                                <a class="nav-header__link" href="#">Home</a>
+                                <a class="nav-header__link" href="#home">Home</a>
                             </li>
                             <li class="nav-header__item">
-                                <a href="#">About us</a>
+                                <a href="#about">About us</a>
                             </li>
                             <li class="nav-header__item">
-                                <a class="nav-header__link" href="#">How it’s made?</a>
+                                <a class="nav-header__link" href="#how_it's_made">How it’s made?</a>
                             </li>
                             <li class="nav-header__item">
-                                <a class="nav-header__link" href="#">Our products</a>
+                                <a class="nav-header__link" href="#products">Our products</a>
                             </li>
                             <li class="nav-header__item">
-                                <a class="nav-header__link" href="#">Contact</a>
+                                <a class="nav-header__link" href="#location">Contact</a>
                             </li>
                         </ul>
                     </nav>
@@ -46,7 +44,6 @@
                         </svg>
                     </button>
                 </div>
-            </nav>
         </div> 
     </header>
     <main>
@@ -54,20 +51,17 @@
             <h1 class="hero__title">ice cream made with passion</h1>
             <ul class="hero__list">
                 <li class="hero__item">
-                    <a class="hero__link" href="#">Products</a>
+                    <a class="hero__link" href="#products">Products</a>
                 </li>
                 <li class="hero__item">
-                    <a class="hero__link" href="#">How it’s made?</a>
+                    <a class="hero__link" href="#how_it's_made">How it’s made?</a>
                 </li>
             </ul>
             <div>
                 <!-- Добавляю фото молока с учетом адаптивности и качесвта для ретины -->
-            <picture>
-                <source srcset="" media="" sizes="" type="images/png">
-                <source srcset="" media="" sizes="" type="images/png">
-                <source srcset="" media="" sizes="" type="images/png">
-                <img src="images/table/milk.png" alt="кувшин с молоком">
-            </picture>
+                <img srcset="images/table/milk.png 1x, images/table/milk@2x.png 2x, images/desktop/milk188.png 1x, images/desktop/milk376@2x.png 2x"
+                src="images/table/milk.png" 
+                alt="jug of milk">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
             <svg width="26" height="26">
                 <use href="images/icons.svg#arrow-right"></use>
@@ -75,12 +69,9 @@
         </div>
         <div>
              <!-- Добавляю фото мороженного с учетом адаптивности и качества для ретины -->
-            <picture>
-                <source srcset="" media="" sizes="" type="images/png">
-                <source srcset="" media="" sizes="" type="images/png">
-                <source srcset="" media="" sizes="" type="images/png">
-                <img src="images/mobile/iceCream.png" alt="Красочное мороженное в вафельном рожке">
-            </picture>
+                <img srcset="images/mobile/iceCream.png 1x, images/mobile/iceCream@2x.png 2x, images/table/iceCream.png 1x, images/table/iceCream@2x.png 2x, images/desktop/iceCream.png 1x, images/desktop/iceCream@2x.png 2x "
+                src="images/mobile/iceCream.png" 
+                alt="Colorful ice cream in a waffle cone">
         </div>
         <ul class="establishments">
             <li>
@@ -92,24 +83,11 @@
                 <p>food trucks</p>
             </li>
         </ul>
-        <!-- второй вариант establishments-->
-        <!-- <div>
-            <b>16</b>
-            <p>cafes</p>
-        </div>
-        <div>
-            <b>23</b>
-            <p>food trucks</p>
-        </div> -->
         <div>
              <!-- Добавляю фото tasty с учетом адаптивности и качества для ретины -->
-            <picture>
-                <source srcset="" media="" sizes="" type="images/png">
-                <source srcset="" media="" sizes="" type="images/png">
-                <source srcset="" media="" sizes="" type="images/png">
-                <img src="images/table/tasty.png" alt="Девушка ест мороженное в рожке">
-            </picture>
+                <img srcset="images/table/tasty.png 1x, images/table/tasty@2x.png 2x, images/desktop/tasty.png 1x, images/desktop/tasty@2x.png 2x "
+                src="images/table/tasty.png" 
+                alt="Girl eats ice cream in a cone">
         </div>
         </div>
-        
-    </main>
+    </main> 
