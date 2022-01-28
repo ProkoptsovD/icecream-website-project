@@ -33,3 +33,8 @@ $clr-bg-bright-02: #c2e297; //color for bright background in PRODUCT section and
 //decoration colors
 $clr-dots-cstm-rev: #d9d9d9; // color for dots that indicate switching to another comment in CUSTOMER REVIEW section
 $clr-undrline-effect: #e1e1e1; //is used for underlined effect in OUR LOCATION
+
+//===========================TRANSITIONS======================================================//
+
+$transition-time: 250ms;
+$cubic: cubic-bezier(0.4, 0, 0.2, 1); // transition timing function
