@@ -1,0 +1,160 @@
+.slick {
+  padding-top: 80px;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 121px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding-top: 123px;
+  }
+}
+
+.slick__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.slick__text {
+  position: relative;
+  z-index: 2;
+
+  font-family: $font-main;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 2.58;
+  color: $clr-text-darker;
+
+  text-align: center;
+  letter-spacing: $letter-spacing;
+
+  background-image: repeating-linear-gradient(
+    to top,
+    $clr-undrline-effect,
+    $clr-undrline-effect 1px,
+    $clr-bg-lighter 1px,
+    $clr-bg-lighter 30px
+  );
+
+  @media screen and (min-width: 768px) {
+    font-size: $font-size;
+    line-height: 2.14;
+  }
+
+  @media screen and (min-width: 1280px) {
+    font-size: 16px;
+    line-height: 1.88;
+  }
+
+  &::before {
+    content: '';
+
+    position: absolute;
+    top: -18px;
+    left: -4px;
+
+    width: 54px;
+    height: 40px;
+
+    background-image: url(images/slider/“.svg);
+
+    z-index: -1;
+
+    @media screen and (min-width: 768px) {
+      top: -17px;
+      left: -20px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      top: -15px;
+      left: -36px;
+    }
+  }
+
+  &::after {
+    content: '';
+
+    position: absolute;
+    bottom: -60px;
+    left: 39%;
+
+    width: 32px;
+    height: 4px;
+
+    background-image: url(images/slider/dots.svg);
+  }
+
+  @media screen and (min-width: 768px) {
+    bottom: -65px;
+    left: 45%;
+  }
+
+  @media screen and (min-width: 1280px) {
+    bottom: -79px;
+    left: 48%;
+  }
+}
+
+.slick__text-thumb {
+  margin-bottom: 30px;
+  padding-top: 43px;
+  padding-bottom: 26px;
+  padding-right: 50px;
+  padding-left: 50px;
+
+  background-color: $clr-bg-lighter;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 24px;
+    padding-top: 47px;
+    padding-bottom: 34px;
+    padding-right: 36px;
+    padding-left: 60px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 34px;
+    padding-top: 47px;
+    padding-bottom: 39px;
+    padding-right: 54px;
+    padding-left: 59px;
+  }
+}
+
+.slick__image {
+  margin-bottom: 29px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 19px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 15px;
+  }
+}
+
+.slick__label {
+  margin-bottom: 30px;
+
+  font-family: $font-main;
+  font-weight: 500;
+  font-size: $font-size;
+  line-height: 1.86;
+  color: $clr-text-darker;
+
+  text-align: center;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 35px;
+
+    font-size: 16px;
+    line-height: 1.88;
+  }
+
+  @media screen and (min-width: 1280px) {
+    font-size: 20px;
+    line-height: 1.85;
+  }
+}
