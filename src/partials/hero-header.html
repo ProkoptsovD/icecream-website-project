@@ -59,19 +59,26 @@
             </ul>
             <div>
                 <!-- Добавляю фото молока с учетом адаптивности и качесвта для ретины -->
-                <img srcset="images/table/milk.png 1x, images/table/milk@2x.png 2x, images/desktop/milk188.png 1x, images/desktop/milk376@2x.png 2x"
-                src="images/table/milk.png" 
-                alt="jug of milk">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
-            <svg width="26" height="26">
-                <use href="images/icons.svg#arrow-right"></use>
-            </svg>
-        </div>
-        <div>
+                <picture>
+                    <source srcset="images/desktop/milk188.png 1x, images/desktop/milk376@2x.png 2x" media="" type="image/png">
+                    <source srcset="images/table/milk.png 1x, images/table/milk@2x.png 2x" media="" type="image/png">
+                    <img src="images/table/milk.png" alt="jug of milk">
+                </picture>
+                
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
+                <svg width="26" height="26">
+                    <use href="images/icons.svg#arrow-right"></use>
+                </svg>
+            </div>
+            <div>
              <!-- Добавляю фото мороженного с учетом адаптивности и качества для ретины -->
-                <img srcset="images/mobile/iceCream.png 1x, images/mobile/iceCream@2x.png 2x, images/table/iceCream.png 1x, images/table/iceCream@2x.png 2x, images/desktop/iceCream.png 1x, images/desktop/iceCream@2x.png 2x "
-                src="images/mobile/iceCream.png" 
-                alt="Colorful ice cream in a waffle cone">
+             <picture>
+                 <source srcset="images/desktop/iceCream.png 1x, images/desktop/iceCream@2x.png 2x" media="" type="image/png">
+                 <source srcset="images/table/iceCream.png 1x, images/table/iceCream@2x.png 2x" media="" type="image/png">
+                 <source srcset="images/mobile/iceCream.png 1x, images/mobile/iceCream@2x.png 2x" media="" type="image/png">
+                 <img src="images/mobile/iceCream.png" alt="Colorful ice cream in a waffle cone">
+             </picture>
+                
         </div>
         <ul class="establishments">
             <li>
@@ -85,9 +92,12 @@
         </ul>
         <div>
              <!-- Добавляю фото tasty с учетом адаптивности и качества для ретины -->
-                <img srcset="images/table/tasty.png 1x, images/table/tasty@2x.png 2x, images/desktop/tasty.png 1x, images/desktop/tasty@2x.png 2x "
-                src="images/table/tasty.png" 
-                alt="Girl eats ice cream in a cone">
+             <picture>
+                 <source srcset="" media="" type="image/png">
+                 <source srcset="images/table/tasty.png 1x, images/table/tasty@2x.png 2x" media="" type="image/png">
+                 <img src="images/table/tasty.png" alt="Girl eats ice cream in a cone">
+             </picture>
+                
         </div>
         </div>
     </main> 
