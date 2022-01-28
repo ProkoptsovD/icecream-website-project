@@ -6,3 +6,34 @@
   line-height: 1.86;
   font-weight: 700;
 }
+
+.footer-contact {
+  text-align: right;
+
+  &__text {
+    color: $clr-text-darker;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.86;
+  }
+
+  &__tel {
+    color: $clr-accent;
+    padding-right: 20px;
+  }
+}
+
+.footer__text {
+  font-family: $font-secondary;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.17;
+  text-transform: uppercase;
+
+  color: $clr-brand-darker;
+}
+
+.passion {
+  color: $clr-accent;
+}
