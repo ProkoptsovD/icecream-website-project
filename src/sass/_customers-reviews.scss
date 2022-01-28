@@ -18,6 +18,8 @@
 }
 
 .slick__text {
+  position: relative;
+
   z-index: 2;
 
   font-family: $font-main;
@@ -80,14 +82,12 @@
   }
 
   @media screen and (min-width: 1280px) {
-    top: -15px;
-    left: -16px;
+    top: 33px;
+    left: 43px;
   }
 }
 
 .slick__text-thumb {
-  position: relative;
-
   margin-bottom: 30px;
   padding-top: 43px;
   padding-bottom: 26px;
