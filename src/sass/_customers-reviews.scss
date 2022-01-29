@@ -30,12 +30,20 @@
     $clr-undrline-effect,
     $clr-undrline-effect 1px,
     $clr-bg-lighter 1px,
-    $clr-bg-lighter 30px
+    $clr-bg-lighter 31px
   );
 
   @media screen and (min-width: 768px) {
     font-size: $font-size;
     line-height: 2.14;
+
+    background-image: repeating-linear-gradient(
+      to top,
+      $clr-undrline-effect,
+      $clr-undrline-effect 1px,
+      $clr-bg-lighter 1px,
+      $clr-bg-lighter 30px
+    );
   }
 
   @media screen and (min-width: 1280px) {
@@ -164,20 +172,6 @@
 
 .slick-list {
   overflow: hidden;
-  margin-left: auto;
-  margin-right: auto;
-
-  @media screen and (min-width: 480px) {
-    width: 300px;
-  }
-  @media screen and (min-width: 768px) {
-    width: 720px;
-  }
-  @media screen and (min-width: 1280px) {
-    width: 1080px;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
 }
 .slick-track {
   display: flex;
