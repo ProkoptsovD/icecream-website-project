@@ -15,6 +15,24 @@
   }
 }
 
+.locations__container {
+  max-width: 1280px;
+  margin: 0 auto;
+
+  @media screen and (min-width: 1280px) {
+    background-image: url(../images/locations-x1.png);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: top 102px left 0;
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url(../images/locations-x2.png);
+    }
+  }
+}
+
 // удалить!!!
 .visually-hidden {
   position: absolute;
