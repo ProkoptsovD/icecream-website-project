@@ -72,6 +72,7 @@
   text-align: center;
 }
 .product-list__title {
+  position: relative;
   margin-bottom: 66px;
   @media screen and (min-width: 1280px) {
     margin-bottom: 70px;
@@ -87,6 +88,20 @@
 
   color: $clr-bg-lighter;
 }
+///=====оформление товара(псевдоэлементы)====///
+.product-list__title::after {
+  content: '';
+  position: absolute;
+  width: 26px;
+  height: 6px;
+  background-image: url(../images/img-for-product/points.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  top: 250%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .product-list__description {
   margin-bottom: 30px;
   text-align: center;
