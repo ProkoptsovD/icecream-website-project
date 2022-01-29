@@ -1,0 +1,407 @@
+.header {
+    background-color: $clr-brand;
+    height: 56px;
+
+    @media screen and (min-width: 768px) {
+        height: 87px;
+        z-index: 1;
+        
+    }
+}
+
+.nav-header {
+    display: flex;
+
+    .nav-header__list {
+        display: flex;
+    }
+
+    .nav-header__link {
+        font-weight: 700;
+        color: $clr-text-lighter  ;
+        line-height: 1.285;
+    }
+
+    .nav-header__link--active {
+        color: $clr-accent;
+    }
+
+}
+
+// Кнопки мобильного меню
+
+// мобильное меню
+
+.menu-container {
+    display: none;
+
+    @media screen and (min-width: 1280px) {
+        display: block;
+    }
+}
+
+// Контейнер Hero
+.section-hero {
+    background-color: $clr-brand;
+}
+.hero {
+    position: relative;
+    padding-top: 136px;
+    overflow: hidden;
+
+
+    @media screen and (min-width: 768px) {
+        padding-top: 15px;
+    }
+    @media screen and (min-width: 1280px) {
+        padding-top: 84px;
+        
+    }
+
+    .container-title {
+        width: 218px;
+
+        @media screen and (min-width: 768px) {
+            width: 162px;
+        }
+
+        @media screen and (min-width: 1280px) {
+            width: 277px;
+            margin-left: 115px;
+        }
+    }
+
+    &__title {
+        position: relative;
+        margin-bottom: 19px;
+        z-index: 2;
+        font-family: $font-secondary;
+        font-size: 26px;
+        line-height: 1.153;
+        text-transform: uppercase;
+        color: $clr-text-lighter;
+
+        @media screen and (min-width: 768px) {
+            font-size: 26px;
+        }
+        @media screen and (min-width: 1280px) {
+            font-size: 38px;
+            line-height: 1.157;
+        }
+    
+
+    &--change-color {
+        font-size: 48px;
+        line-height: 0.95;
+        color: $clr-accent;
+
+         @media screen and (min-width: 768px) {
+           font-size: 34px;
+           line-height: 0.91;
+         }
+
+         @media screen and (min-width: 1280px) {
+           font-size: 58px;
+           line-height: 0.91;
+         }
+  } 
+
+  @media screen and (min-width: 768px) {
+      font-size: 22px;
+      line-height: 1.136;
+      margin-bottom: 20px;
+  }
+
+  @media screen and (min-width: 1280px) {
+      font-size: 38px;
+      line-height: 1.157;
+      margin-bottom: 25px;
+  }
+}
+    &__list {
+        position: relative;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        z-index: 2;
+        margin-bottom: 160px;
+
+        @media screen and (min-width: 768px) {
+            margin-bottom: 173px;
+            
+        }
+
+        @media screen and (min-width: 1280px) {
+            margin-bottom: 292px;
+            margin-left: 115px;
+            
+        }
+        
+    }
+    &__products {
+       width: 62px;
+       height: 24px;
+       margin-right: 8px;
+
+       @media screen and (min-width: 1280px) {
+           width: 104px;
+           height: 40px;
+       }
+    }
+
+    &__item {
+        width: 83px;
+        height: 24px;
+
+        @media screen and (min-width: 1280px) {
+          width: 138px;
+          height: 40px;
+        }
+    }
+
+    &__link {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        font-size: 8px;
+        line-height: 1.25;
+        border-radius: 20px;
+        
+
+        @media screen and (min-width: 1280px) {
+        font-size: 14px;
+        line-height: 1.285;
+        }
+    }
+
+    &__products-link {
+        background-color: $clr-accent;
+        color: $clr-text-lighter;
+        
+
+        &:hover {
+            background-color: $clr-accent-darker;
+        }
+    }
+
+    &__about-link {
+        background-color: $clr-bg-the-lightest;
+        color: $clr-accent;
+
+        &:hover {
+            // внести в переменную цвет при ховеру
+          background-color: #ECEBEB;
+        }
+    }
+
+}
+
+
+.bio-information {
+    display: none;
+    @media screen and (min-width: 768px) {
+        display: block;
+        position: absolute;
+        left: 154px;
+        bottom: 34px;
+    }
+
+    @media screen and (min-width: 1280px) {
+        left: 295px;
+        bottom: 56px;
+        
+    }
+
+    .bio-information__text {
+      display: block;
+      font-size: 8px;
+      line-height: 1.5;
+      color: $clr-text-lighter;
+      width: 114px;
+      margin-bottom: 7px;
+
+      @media screen and (min-width: 1280px) {
+          font-size: 14px;
+          line-height: 1.4;
+          width: 200px;
+      }
+    }
+    .bio-information__button {
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        border: none;
+        background-color: $clr-bg-the-lightest;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+    &__icon {
+      fill: $clr-accent;
+    }
+}
+
+// количесвто заведений
+.establishments {
+    display: none;
+
+    @media screen and (min-width: 768px) {
+        display: block;
+        position: absolute;
+        top: 9px;
+        right: 0;
+        text-align: end;
+        margin-right: 34px;
+
+        @media screen and (min-width: 1280px) {
+            top: 69px;
+            
+        }
+    }
+
+    &__number {
+        position: relative;
+        font-family: $font-secondary;
+        font-size: 28px;
+        line-height: 1.28;
+        text-transform: uppercase;
+        color: $clr-accent;
+        
+
+        @media screen and (min-width: 1280px) {
+            font-size: 46px;
+            line-height: 1.152;
+            
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: -5px;
+            right: -5px ;
+            width: 16px;
+            height: 16px;
+            background-color: white;
+            border-radius: 50%;
+            
+            
+            @media screen and (min-width: 1280px) {
+                width: 30px;
+                height: 30px;
+                 
+            }
+        }
+    }
+
+    &__text {
+        font-size: 8px;
+        line-height: 1.25;
+        color: $clr-text-lighter;
+
+        @media screen and (min-width: 1280px) {
+            font-size: 14px;
+            line-height: 1.285;
+            
+        }
+    }
+}
+
+// позиционировани картинок
+
+// мороженное
+.container-ice-cream {
+    position: absolute;
+    width: 346px;
+    height: 344px;
+    left: 36px;
+    bottom: 75px;
+    overflow: hidden;
+    background-image: url(../images/mobile/circle.png);
+    background-repeat: no-repeat;
+
+     @media (min-device-pixel-ratio: 2),
+     (min-resolution: 192dpi),
+     (min-resolution: 2dppx) {
+       background-image: url(../images/mobile/circle@2x.png)
+     }
+
+    @media screen and (min-width: 768px) {
+        width: 324px;
+        height: 322px;
+        left: 307px;
+        bottom: 46px;
+        background-size: contain;
+        background-image: url(../images/table/circle.png);
+
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+          background-image: url(../images/table/circle@2x.png)
+        }
+    }
+    @media screen and (min-width: 1280px) {
+        width: 538px;
+        height: 538px;
+        left: 475px;
+        bottom: 75px;
+        background-size: contain;
+        background-image: url(../images/desktop/circle.png);
+
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url(../images/desktop/circle@2x.png)
+        }
+    }
+
+}
+.ice-cream {
+    position: absolute;
+    left: 117px;
+    bottom: 0;
+    z-index: 1;
+
+    @media screen and (min-width: 768px) {
+        left: 378px;
+        bottom: 0;
+    }
+
+    @media screen and (min-width: 1280px) {
+        left: 594px;
+        bottom: 0; 
+    }
+}
+
+// кувшин с молоком
+.milk {
+    display: none;
+    @media screen and (min-width: 768px) {
+        display: block;
+        position: absolute;
+        left: 34px;
+        bottom: 28px;
+    }
+
+    @media screen and (min-width: 1280px) {
+        left: 77px;
+        bottom: 45px;
+    }
+}
+
+// девушка с мороженным
+.tasty-ice {
+    display: none;
+    @media screen and (min-width: 768px) {
+        display: block;
+        position: absolute;
+        right: 34px;
+        bottom: 0;
+    }
+
+    @media screen and (min-width: 1280px) {
+        right: 109px;
+        bottom: 0;
+    }
+}
