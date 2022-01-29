@@ -67,7 +67,7 @@
 
         @media screen and (min-width: 1280px) {
             width: 277px;
-            margin-left: 115px;
+            margin-left: 53px;
         }
     }
 
@@ -133,7 +133,7 @@
 
         @media screen and (min-width: 1280px) {
             margin-bottom: 292px;
-            margin-left: 115px;
+            margin-left: 53px;
             
         }
         
@@ -261,6 +261,40 @@
         }
     }
 
+    &__item {
+
+        position: relative;
+
+         &::before {
+           content: "";
+           position: absolute;
+           top: -3px;
+           right: -7px;
+           width: 16px;
+           height: 16px;
+           background-color: white;
+           border-radius: 50%;
+
+           @media screen and (min-width: 1280px) {
+             top: -10px;
+             right: -10px;
+             width: 30px;
+             height: 30px;
+
+           }
+         }
+         &:not(:last-child) {
+             @media screen and (min-width: 768px) {
+                 margin-bottom: 13px;
+                 
+             }
+            @media screen and (min-width: 1280px) {
+                margin-bottom: 15px;
+            }
+         }
+         
+    }
+
     &__number {
         position: relative;
         font-family: $font-secondary;
@@ -276,23 +310,7 @@
             
         }
 
-        &::after {
-            content: "";
-            position: absolute;
-            top: -5px;
-            right: -5px ;
-            width: 16px;
-            height: 16px;
-            background-color: white;
-            border-radius: 50%;
-            
-            
-            @media screen and (min-width: 1280px) {
-                width: 30px;
-                height: 30px;
-                 
-            }
-        }
+       
     }
 
     &__text {
@@ -344,7 +362,7 @@
     @media screen and (min-width: 1280px) {
         width: 538px;
         height: 538px;
-        left: 475px;
+        left: 398px;
         bottom: 75px;
         background-size: contain;
         background-image: url(../images/desktop/circle.png);
@@ -369,7 +387,7 @@
     }
 
     @media screen and (min-width: 1280px) {
-        left: 594px;
+        left: 517px;
         bottom: 0; 
     }
 }
@@ -385,7 +403,7 @@
     }
 
     @media screen and (min-width: 1280px) {
-        left: 77px;
+        left: 62px;
         bottom: 45px;
     }
 }
@@ -401,7 +419,7 @@
     }
 
     @media screen and (min-width: 1280px) {
-        right: 109px;
+        right: 12px;
         bottom: 0;
     }
 }
