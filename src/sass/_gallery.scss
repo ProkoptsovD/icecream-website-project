@@ -16,6 +16,12 @@
   &__thumb {
     border-radius: 20px;
     overflow: hidden;
+
+    &--is-hovered {
+      animation: tada;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+    }
   }
 
   &__image {

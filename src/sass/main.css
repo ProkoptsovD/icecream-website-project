@@ -342,6 +342,14 @@ body {
   border-radius: 20px;
   overflow: hidden;
 }
+.grid__thumb--is-hovered {
+  -webkit-animation: tada;
+          animation: tada;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
 .grid__image {
   display: block;
   width: 100%;
