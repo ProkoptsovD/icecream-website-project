@@ -1,17 +1,17 @@
 .locations {
   padding-top: 86px;
   padding-bottom: 113px;
-  background: linear-gradient(to bottom, $clr-bg-the-lightest 10%, $clr-bg-normal 10%);
+  background: linear-gradient(to bottom, $clr-bg-the-lightest 170px, $clr-bg-normal 170px);
 
   @media screen and (min-width: 768px) {
     padding-top: 119px;
     padding-bottom: 165px;
-    background: linear-gradient(to bottom, $clr-bg-the-lightest 21%, $clr-bg-normal 21%);
+    background: linear-gradient(to bottom, $clr-bg-the-lightest 197px, $clr-bg-normal 197px);
   }
 
   @media screen and (min-width: 1280px) {
     padding-top: 132px;
-    background: linear-gradient(to bottom, $clr-bg-the-lightest 24%, $clr-bg-normal 24%);
+    background: linear-gradient(to bottom, $clr-bg-the-lightest 234px, $clr-bg-normal 234px);
   }
 }
 
@@ -32,19 +32,6 @@
     }
   }
 }
-
-// удалить!!!
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-// удалить!!!
 
 .locations__list {
   margin-bottom: 54px;
@@ -85,7 +72,7 @@
     padding-right: 32px;
     padding-bottom: 50px;
     padding-left: 31px;
-    width: calc(100% - 60px / 3);
+    flex-basis: calc(100% - 60px / 3);
     font-size: 14px;
 
     &:not(:last-child) {
@@ -96,9 +83,9 @@
   @media screen and (min-width: 1280px) {
     padding-top: 51px;
     padding-right: 43px;
-    padding-bottom: 62px;
+    padding-bottom: 61px;
     padding-left: 43px;
-    width: calc(100% - 90px / 3);
+    flex-basis: calc(100% - 90px / 3);
     font-size: 16px;
 
     &:not(:last-child) {
@@ -108,7 +95,6 @@
 }
 
 .locations__type {
-  display: inline-block;
   margin-bottom: 25px;
   border-radius: 4px;
   text-transform: uppercase;
@@ -169,33 +155,36 @@
 
   @media screen and (min-width: 768px) {
     margin-bottom: 30px;
-    line-height: 1.66;
+    line-height: 1.55;
   }
 
   @media screen and (min-width: 1280px) {
     margin-bottom: 32px;
-    line-height: 1.83;
+    line-height: 1.61;
     letter-spacing: $letter-spacing;
   }
 }
 
 .locations__working {
   margin-bottom: 25px;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding-top: 24px;
+  padding-bottom: 24px;
   border-top: 1px solid $clr-undrline-effect;
   border-bottom: 1px solid $clr-undrline-effect;
+  line-height: 1.77;
 
   @media screen and (min-width: 768px) {
     margin-bottom: 30px;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 29px;
+    padding-bottom: 29px;
+    line-height: 1.73;
   }
 
   @media screen and (min-width: 1280px) {
     margin-bottom: 32px;
-    padding-top: 32px;
-    padding-bottom: 32px;
+    padding-top: 31px;
+    padding-bottom: 31px;
+    line-height: 1.81;
   }
 }
 
@@ -231,8 +220,20 @@
   color: $clr-brand-darker;
 }
 
+.locations__contacts {
+  line-height: 1.54;
+
+  @media screen and (min-width: 768px) {
+    line-height: 1.71;
+  }
+
+  @media screen and (min-width: 1280px) {
+    line-height: 1.56;
+  }
+}
+
 .locations__contacts-item {
-  line-height: $line-height;
+  display: block;
   letter-spacing: 0.03em;
   color: inherit;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -240,10 +241,6 @@
   &:hover,
   &:focus {
     color: $clr-brand-darker;
-  }
-
-  @media screen and (min-width: 768px) {
-    line-height: 1.83;
   }
 }
 
