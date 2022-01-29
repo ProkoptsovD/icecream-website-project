@@ -14,8 +14,8 @@
   font-size: 16px;
   line-height: 21px;
 
-  border: 1px solid $clr-bg-the-lightest;
-  border-radius: 20px;
+  border: none;
+  border-radius: 22px;
 
   background-color: $clr-bg-the-lightest;
   color: $clr-accent;
@@ -24,7 +24,6 @@
 
   &:hover,
   &:focus {
-    border: 1px solid $clr-accent;
     background-color: $clr-accent;
     color: $clr-bg-the-lightest;
   }
