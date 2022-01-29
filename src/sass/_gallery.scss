@@ -3,7 +3,7 @@
     to bottom,
     $clr-bg-normal 40%,
     $clr-bg-the-lightest 40%,
-    $clr-bg-the-lightest 1000%
+    $clr-bg-the-lightest 100%
   );
 }
 
@@ -13,9 +13,10 @@
     overflow: hidden;
 
     &--is-hovered {
-      animation: tada;
-      animation-duration: 3s;
+      animation: jello;
+      animation-duration: 1500ms;
       animation-iteration-count: infinite;
+      z-index: 10;
     }
   }
 
@@ -24,4 +25,12 @@
     width: 100%;
     height: 100%;
   }
+}
+
+.sizer {
+  width: calc((100% - 7 * 5px) / 7);
+}
+
+.sizer-2x {
+  width: calc((100% - 7 * 5px) / 7 * 2);
 }
