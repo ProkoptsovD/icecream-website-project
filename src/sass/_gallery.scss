@@ -1,0 +1,27 @@
+.gallery {
+  background-image: linear-gradient(
+    to bottom,
+    $clr-bg-normal 40%,
+    $clr-bg-the-lightest 40%,
+    $clr-bg-the-lightest 1000%
+  );
+}
+
+.grid {
+  &__thumb {
+    border-radius: 20px;
+    overflow: hidden;
+
+    &--is-hovered {
+      animation: tada;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+    }
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
