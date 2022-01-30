@@ -11,13 +11,15 @@
             <li class="locations__working-item">
               <p class="locations__working-weekdays">Monday - Friday</p>
               <p class="locations__working-time">
-                <time datetime="06:00">06:00 AM</time> - <time datetime="22:00">10:00 PM</time>
+                <time datetime="06:00">06:00 AM</time> -
+                <time datetime="22:00">10:00 PM</time>
               </p>
             </li>
             <li class="locations__working-item">
               <p class="locations__working-weekdays">Saturday - Sunday</p>
               <p class="locations__working-time">
-                <time datetime="08:00">08:00 AM</time> - <time datetime="16:00">04:00 PM</time>
+                <time datetime="08:00">08:00 AM</time> -
+                <time datetime="16:00">04:00 PM</time>
               </p>
             </li>
           </ul>
@@ -40,13 +42,15 @@
             <li class="locations__working-item">
               <p class="locations__working-weekdays">Monday - Friday</p>
               <p class="locations__working-time">
-                <time datetime="06:00">06:00 AM</time> - <time datetime="22:00">10:00 PM</time>
+                <time datetime="06:00">06:00 AM</time> -
+                <time datetime="22:00">10:00 PM</time>
               </p>
             </li>
             <li class="locations__working-item">
               <p class="locations__working-weekdays">Saturday - Sunday</p>
               <p class="locations__working-time">
-                <time datetime="08:00">08:00 AM</time> - <time datetime="16:00">04:00 PM</time>
+                <time datetime="08:00">08:00 AM</time> -
+                <time datetime="16:00">04:00 PM</time>
               </p>
             </li>
           </ul>
@@ -69,13 +73,15 @@
             <li class="locations__working-item">
               <p class="locations__working-weekdays">Monday - Friday</p>
               <p class="locations__working-time">
-                <time datetime="06:00">06:00 AM</time> - <time datetime="22:00">10:00 PM</time>
+                <time datetime="06:00">06:00 AM</time> -
+                <time datetime="22:00">10:00 PM</time>
               </p>
             </li>
             <li class="locations__working-item">
               <p class="locations__working-weekdays">Saturday - Sunday</p>
               <p class="locations__working-time">
-                <time datetime="08:00">08:00 AM</time> - <time datetime="16:00">04:00 PM</time>
+                <time datetime="08:00">08:00 AM</time> -
+                <time datetime="16:00">04:00 PM</time>
               </p>
             </li>
           </ul>
@@ -93,12 +99,53 @@
       </ul>
       <ul class="locations__button-list">
         <li class="locations__button-item">
-          <button class="locations__button button" type="button">Our Locations</button>
+          <button
+            data-modal="Locations"
+            class="locations__button button js-open-modal"
+            type="button"
+          >
+            Our Locations
+          </button>
         </li>
         <li class="locations__button-item">
-          <button class="locations__button button" type="button">Franchise</button>
+          <button
+            data-modal="Franchise"
+            class="locations__button button js-open-modal"
+            type="button"
+          >
+            Franchise
+          </button>
         </li>
       </ul>
+
+      <!-- modal Locations -->
+      <div class="modal js-modal" data-modal="Locations">
+        <svg width="14" height="14" class="modal__icon-cross js-modal-close">
+          <use href="./images/icons.svg#cross"></use>
+        </svg>
+        <p class="modal__title">Our Locations</p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet omnis nesciunt
+          necessitatibus consequatur eum sunt dignissimos tempora nemo! Itaque libero ipsam vel
+          error! Unde blanditiis animi harum, delectus quo quis.
+        </p>
+      </div>
+
+      <!-- modal Franchise -->
+      <div class="modal js-modal" data-modal="Franchise">
+        <svg width="14" height="14" class="modal__icon-cross js-modal-close">
+          <use href="./images/icons.svg#cross"></use>
+        </svg>
+        <p class="modal__title">Franchise</p>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam excepturi error sunt ea
+          veritatis rerum, aperiam quisquam minus possimus suscipit, perferendis placeat iste minima
+          non enim veniam! Tempora, quidem nemo.
+        </p>
+      </div>
+
+      <!-- Подложка под модальным окном -->
+      <div class="overlay js-modal-overlay" id="overlay-modal"></div>
     </div>
   </div>
 </section>
