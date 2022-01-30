@@ -61,25 +61,24 @@
                 </li>
             </ul>
             <!-- Добавляю фото молока с учетом адаптивности и качесвта для ретины -->
-            <div class="milk">
+            <div class="bio-information-thumb">
+                <div class="milk">
                 <picture >
                     <source srcset="images/desktop/milk.png 1x, images/desktop/milk@2x.png 2x" media="(min-width: 1280px)" type="image/png">
                     <source srcset="images/table/milk.png 1x, images/table/milk@2x.png 2x" media="(min-width: 768px)" type="image/png">
                     <img src="images/table/milk.png" alt="jug of milk">
                 </picture>
+                </div>
+                <div class="bio-information">
+                    <p class="bio-information__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
+                    <button type="button" class="bio-information__button">
+                        <svg width="8" height="8" class="bio-information__icon">
+                            <use href="images/icons.svg#arrow-right"></use>
+                        </svg>
+                    </button>
+                </div>
             </div>
-            <div class="bio-information">
-                <p class="bio-information__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
-                <button type="button" class="bio-information__button">
-                    <svg width="8" height="8" class="bio-information__icon">
-                        <use href="images/icons.svg#arrow-right"></use>
-                    </svg>
-                </button>
-            </div>
-            <div class="container-ice-cream">
-                <!-- Добавляю фото мороженного с учетом адаптивности и качества для ретины -->
-                
-            </div>
+            
             <div class="ice-cream">
                 <picture>
                     <source srcset="images/desktop/iceCream.png 1x, images/desktop/iceCream@2x.png 2x" media="(min-width: 1280px)" type="image/png">
