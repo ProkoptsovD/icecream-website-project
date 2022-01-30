@@ -10,14 +10,15 @@
 
 .grid {
   &__thumb {
-    border-radius: 20px;
+    border-radius: 5px;
     overflow: hidden;
 
-    &--is-hovered {
-      animation: jello;
-      animation-duration: 1500ms;
-      animation-iteration-count: infinite;
-      z-index: 10;
+    @media screen and (min-width: 768px) {
+      border-radius: 12px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      border-radius: 20px;
     }
   }
 
