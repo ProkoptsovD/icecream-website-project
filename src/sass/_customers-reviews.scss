@@ -1,3 +1,15 @@
+.slick__container {
+  @media screen and (min-width: 768px) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding-left: 63px;
+    padding-right: 61px;
+  }
+}
+
 .slick {
   padding-top: 80px;
   background-color: $clr-text-lighter;
@@ -49,14 +61,22 @@
   @media screen and (min-width: 1280px) {
     font-size: 16px;
     line-height: 1.88;
+
+    background-image: repeating-linear-gradient(
+      to top,
+      $clr-undrline-effect,
+      $clr-undrline-effect 1px,
+      $clr-bg-lighter 1px,
+      $clr-bg-lighter 30.5px
+    );
   }
 }
 .slick__text::before {
   content: '';
 
   position: absolute;
-  top: -16px;
-  left: -31px;
+  top: -14px;
+  left: -32px;
 
   width: 54px;
   height: 40px;
@@ -66,21 +86,21 @@
   z-index: -1;
 
   @media screen and (min-width: 768px) {
-    top: -18px;
-    left: -26px;
+    top: -16px;
+    left: -31px;
   }
 
   @media screen and (min-width: 1280px) {
     top: -14px;
-    left: -15px;
+    left: -38px;
   }
 }
 .slick__text::after {
   content: '';
 
   position: absolute;
-  bottom: -50px;
-  left: 42%;
+  bottom: -48px;
+  left: 39%;
 
   width: 32px;
   height: 4px;
@@ -88,13 +108,13 @@
   background-image: url(../images/slider/dots.svg);
 
   @media screen and (min-width: 768px) {
-    top: 108px;
-    left: 45%;
+    top: 135px;
+    left: 44%;
   }
 
   @media screen and (min-width: 1280px) {
     top: 120px;
-    left: 48%;
+    left: 47%;
   }
 }
 
