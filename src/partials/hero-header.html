@@ -6,47 +6,58 @@
                     <img src="images/logo.png" alt="Company`s logo iceCream">
                 </a>
                 <!-- кнопки мобильного меню -->
-                <button type="button" class="menu-button">
+                <button type="button" class="menu-button" data-modal-open>
                     <svg width="20" height="14">
-                        <use href="images/icons.svg#burger"></use>
+                    <use href="images/icons.svg#burger"></use>
                     </svg>
-                    <svg width="14" height="14">
-                        <use href="images/icons.svg#close"></use>
+                </button>
+                <!-- кнопка buy now планшет + десктоп -->
+                <button class="tab-desk__button button" type="button">
+                    Buy now
+                    <!-- стрелка в кнопке -->
+                    <svg width="5" height="8">
+                    <use href="images/icons.svg#icon-arrow"></use>
                     </svg>
                 </button>
                 <!-- контейнер мобильного меню -->
-                <div class="menu-container">
+                <div class="menu-container menu-container--is-hidden" data-modal>
                     <nav class="nav-header">
                         <!-- Навигация хэддер -->
+                        <button class="menu-close" aria-label="close menu" data-modal-close>
+                        <svg width="14" height="14">
+                            <use href="images/icons.svg#close"></use>
+                        </svg>
+                        </button>
                         <ul class="nav-header__list">
-                            <li class="nav-header__item">
-                                <a class="nav-header__link nav-header__link--active" href="#home">Home</a>
-                            </li>
-                            <li class="nav-header__item">
-                                <a class="nav-header__link" href="#about">About us</a>
-                            </li>
-                            <li class="nav-header__item">
-                                <a class="nav-header__link" href="#how_it's_made">How it’s made?</a>
-                            </li>
-                            <li class="nav-header__item">
-                                <a class="nav-header__link" href="#products">Our products</a>
-                            </li>
-                            <li class="nav-header__item">
-                                <a class="nav-header__link" href="#location">Contact</a>
-                            </li>
+                        <li class="nav-header__item">
+                            <a class="nav-header__link" href="#home">Home</a>
+                        </li>
+                        <li class="nav-header__item">
+                            <a href="#about" class="nav-header__link">About us</a>
+                        </li>
+                        <li class="nav-header__item">
+                            <a class="nav-header__link" href="#how_it's_made">How it’s made?</a>
+                        </li>
+                        <li class="nav-header__item">
+                            <a class="nav-header__link" href="#products">Our products</a>
+                        </li>
+                        <li class="nav-header__item">
+                            <a class="nav-header__link" href="#location">Contact</a>
+                        </li>
                         </ul>
                     </nav>
                     <!-- Кнопка навигации -->
-                    <button class="header-button" type="button">Buy now
-                        <!-- стрелка в кнопке -->
-                        <svg width="4" height="8">
-                            <use href="images/icons.svg#icon-arrow"></use>
-                        </svg>
-                    </button>
+                  <button class="header-button button" type="button">
+                    Buy now
+                    <!-- стрелка в кнопке -->
+                    <svg width="5" height="8">
+                    <use href="images/icons.svg#icon-arrow"></use>
+                    </svg>
+                </button>
                 </div>
-        </div> 
-    </header>
-    <main>
+            </div>
+            </header>
+        <main>
         <section class="section-hero">
         <div class="container hero">
             <div class="container-title">
@@ -78,7 +89,6 @@
                     </button>
                 </div>
             </div>
-            
             <div class="ice-cream">
                 <picture>
                     <source srcset="images/desktop/iceCream.png 1x, images/desktop/iceCream@2x.png 2x" media="(min-width: 1280px)" type="image/png">
@@ -107,4 +117,4 @@
             </div>
         </div>
     </section>
-    </main> 
+    </main>

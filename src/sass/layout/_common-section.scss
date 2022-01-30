@@ -1,0 +1,70 @@
+///=======светло-розовый верхний текст=====///
+.adv-title {
+  font-family: $font-secondary;
+  text-transform: uppercase;
+  color: $clr-brand-darker;
+  margin-bottom: 15px;
+
+  @media screen and (max-width: 767px) {
+    font-size: 18px;
+    line-height: 1.16;
+  }
+  @media screen and (min-width: 768px) {
+    font-size: 26px;
+    line-height: 1.15;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 30px;
+    line-height: 1.13;
+    letter-spacing: $letter-spacing;
+  }
+}
+///только для элементов в main///
+.adv-title__for-main {
+  text-align: center;
+}
+///только для элементов в footer///
+.adv-title__for-footer {
+  @media screen and (min-width: 768px) {
+    letter-spacing: $letter-spacing;
+  }
+}
+
+///=======темно-розовый нижний текст========////
+.adv-accent {
+  font-family: $font-secondary;
+  text-transform: uppercase;
+  color: $clr-accent;
+
+  @media screen and (max-width: 767px) {
+    font-size: 34px;
+    line-height: 1.15;
+    letter-spacing: $letter-spacing;
+  }
+  @media screen and (min-width: 768px) {
+    font-size: 48px;
+    line-height: 1.15;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 58px;
+    line-height: 1.13;
+    letter-spacing: 0.06em;
+  }
+}
+
+///только для элементов в main///
+.adv-accent__for-main {
+  text-align: center;
+  @media screen and (min-width: 768px) {
+    letter-spacing: $letter-spacing;
+  }
+  @media screen and (min-width: 1280px) {
+    letter-spacing: 0.06em;
+  }
+}
+///только для элементов в footer///
+.adv-accent__for-footer {
+  @media screen and (min-width: 768px) {
+    letter-spacing: 0.06em;
+  }
+}
