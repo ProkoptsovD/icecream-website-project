@@ -9,6 +9,9 @@
 //===============utility classes==========================//
 @import './layout/container';
 @import './layout/visually-hidden';
+@import './layout/common-section';
+@import './layout/button';
+@import './layout/modal';
 
 //===============project's sections=======================//
 @import './hero-header';
@@ -17,5 +20,5 @@
 @import './advantages';
 @import './gallery';
 @import './customers-reviews';
-@import './contacts.scss';
+@import './locations';
 @import './footer';
