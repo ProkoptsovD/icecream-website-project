@@ -20,6 +20,8 @@
   background-color: $clr-bg-the-lightest;
   color: $clr-accent;
 
+  transition: background-color $transition-time $cubic, color $transition-time $cubic;
+
   cursor: pointer;
 
   &:hover,
