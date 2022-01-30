@@ -1,49 +1,54 @@
 <section class="about">
     <div class="container-milk">
         <div class="container">
-            <p class="about__text-generalized">TRADITION AND LOVE</p>
+            <p class="about__text-generalized" id="about">TRADITION AND LOVE</p>
             <h2 class="about__title">HOW IT'S MADE?</h2>
 
-            <div class="about__box"></div>
+            <div class="about__box">
 
-            <picture>
-                <source
-                srcset="
-                    images/pitcher-and-cow/pitcher-and-cow-desktop-x1.png 1x,
-                    images/pitcher-and-cow/pitcher-and-cow-desktop-x2.png 2x
-                        "
-                        media="(min-width:1280px)"
+            <div class="about__img-cow">
+                <picture>
+                    <source
+                    srcset="
+                        images/pitcher-and-cow/pitcher-and-cow-desktop-x1.png 1x,
+                        images/pitcher-and-cow/pitcher-and-cow-desktop-x2.png 2x
+                            "
+                            media="(min-width:1280px)"
+                            />
+
+                    <source
+                    srcset="
+                        images/pitcher-and-cow/pitcher-and-cow-tab-x1.png 1x,
+                        images/pitcher-and-cow/pitcher-and-cow-tab-x2.png 2x
+                            "
+                            media="(min-width:768px)"
                         />
 
-                <source
-                srcset="
-                    images/pitcher-and-cow/pitcher-and-cow-tab-x1.png 1x,
-                    images/pitcher-and-cow/pitcher-and-cow-tab-x2.png 2x
-                        "
-                        media="(min-width:768px)"
+                    <source
+                    srcset="
+                        images/pitcher-and-cow/pitcher-and-cow-mob-x1.png 1x,
+                        images/pitcher-and-cow/pitcher-and-cow-mob-x2.png 2x
+                            "
+                            media="(min-width:480px)"
                     />
 
-                <source
-                srcset="
-                    images/pitcher-and-cow/pitcher-and-cow-mob-x1.png 1x,
-                    images/pitcher-and-cow/pitcher-and-cow-mob-x2.png 2x
-                        "
-                        media="(min-width:480px)"
-                />
-
-                <img src="images/pitcher-and-cow/pitcher-and-cow-desktop-x1.png" alt="cow and pitcher with milk">
-        
-            </picture>
+                    <img src="images/pitcher-and-cow/pitcher-and-cow-desktop-x1.png" alt="cow and pitcher with milk">
+            
+                </picture>
+            </div>
 
             <div class="about__box-inner">
 
                 <p class="about__subtitle">Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam vel justo cursus, faucibus lorem eget, egestas eros. Maecenas eleifend erat at justo fringilla.</p>
-                <p class="about__text-description">Curabitur lacinia enim at ex blandit, vel pellentesque odio elementum. Mauris rhoncus orci in imperdiet placerat. Vestibulum euismod nisl suscipit ligula volutpat, a feugiat urna maximus. Cras massa nibh, tincidunt.
+                <p class="about__text-description">Curabitur lacinia enim at ex blandit, vel pellentesque odio elementum. Mauris rhoncus orci in imperdiet placerat. Vestibulum euismod nisl suscipit ligula volutpat, a feugiat urna maximus. Cras massa nibh, tincidunt.</p>
 
 
-                    Aliquam erat volutpat. Aenean accumsan.</p>
-            <button type="button" class="button about__button">
-                Read more
+                <p class="about__text-description-below">Aliquam erat volutpat. Aenean accumsan.</p>
+            <button type="button" class="button">
+                <span>Read more</span>
+                <svg width="4" height="8" class="button__svg">
+                    <use href="images/icons.svg#icon-arrow"></use>
+                </svg>
             </button>
                 </div>
             </div>
