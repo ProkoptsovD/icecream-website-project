@@ -22,7 +22,7 @@
     margin-bottom: 150px;
   }
   @media screen and (min-width: 1280px) {
-    margin-bottom: 300px;
+    margin-bottom: 260px;
   }
 }
 ///=====карточки продуктов===///
@@ -41,7 +41,7 @@
   border-radius: 24px;
 
   @media screen and (max-width: 767px) {
-    padding: 161px 53px 40px 52px;
+    padding: 161px 40px 40px 40px;
     width: 100%;
     &:not(:last-child) {
       margin-bottom: 130px;
@@ -50,7 +50,7 @@
   @media screen and (min-width: 768px) {
     margin-top: 20px;
     margin-left: 20px;
-    padding: 152px 10px 40px 11px;
+    padding: 152px 11px 40px 11px;
     width: calc((100% - 3 * 20px) / 3);
   }
   @media screen and (min-width: 1280px) {
@@ -103,7 +103,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
-///=======mobile======////
+///=======mobile-картинка над названием======////
 @media screen and (max-width: 767px) {
   .product-list__product-icecream::before {
     content: ' ';
@@ -160,7 +160,7 @@
     }
   }
 }
-///========tablet=======////
+///========tablet-картинка над названием=======////
 @media screen and (min-width: 768px) {
   .product-list__product-icecream::before {
     content: ' ';
@@ -217,7 +217,7 @@
     }
   }
 }
-///========desktop========///
+///========desktop-картинка над названием========///
 @media screen and (min-width: 1280px) {
   .product-list__product-icecream::before {
     content: ' ';
@@ -275,6 +275,7 @@
   }
 }
 ///=======================================///
+///========описание продукта==============///
 .product-list__description {
   margin-bottom: 30px;
   text-align: center;
@@ -301,10 +302,35 @@
     display: none;
   }
 }
+///========кнопка========////
 .product-button {
   display: inline-flex;
   height: 40px;
   width: 40px;
   border-color: transparent;
   border-radius: 50%;
+  padding: 10px 10px;
+  scale: 0;
+  transition-property: scale, background-color;
+  transition-duration: $transition-time;
+  transition-timing-function: $cubic;
+  &:hover,
+  &:focus {
+    transform: scale(1.2);
+    background-color: $clr-accent;
+  }
+  &:hover .product-button__icon,
+  &:focus .product-button__icon {
+    fill: $clr-text-lighter;
+  }
+}
+
+.product-button__icon {
+  display: block;
+  height: 15px;
+  width: 15px;
+  fill: $clr-accent;
+  transition-property: fill;
+  transition-duration: $transition-time;
+  transition-timing-function: $cubic;
 }
