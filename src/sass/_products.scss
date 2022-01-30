@@ -1,0 +1,336 @@
+//=====стили секции produducts===///
+.product-section {
+  background-color: $clr-bg-the-lightest;
+}
+.product-box {
+  @media screen and (max-width: 767px) {
+    padding: 121px 20px 98px 20px;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding-top: 122px;
+    padding-bottom: 112px;
+  }
+  @media screen and (min-width: 1280px) {
+    padding-top: 127px;
+    padding-bottom: 119px;
+  }
+}
+///=====секция заголовок=====///
+.title-products {
+  margin-bottom: 141px;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 150px;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 260px;
+  }
+}
+///=====карточки продуктов===///
+.product-list {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    margin-top: -20px;
+    margin-left: -20px;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-top: -24px;
+    margin-left: -24px;
+  }
+}
+.product-list__ithem {
+  border-radius: 24px;
+
+  @media screen and (max-width: 767px) {
+    padding: 161px 42px 40px 41px;
+    width: 100%;
+    &:not(:last-child) {
+      margin-bottom: 130px;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    margin-top: 20px;
+    margin-left: 20px;
+    padding: 152px 28px 40px 28px;
+    width: calc((100% - 3 * 20px) / 3);
+  }
+  @media screen and (min-width: 1280px) {
+    margin-top: 24px;
+    margin-left: 24px;
+    padding: 163px 44px 50px 44px;
+    width: calc((100% - 3 * 24px) / 3);
+  }
+}
+.product-list__ithem--pink {
+  background-color: $clr-brand;
+}
+.product-list__ithem--peach {
+  background-color: #f0d1a5;
+}
+.product-list__ithem--green {
+  background-color: #c2e297;
+}
+///======оформление карточек====///
+.product-list__box {
+  text-align: center;
+}
+.product-list__title {
+  position: relative;
+  margin-bottom: 66px;
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 70px;
+  }
+
+  font-family: $font-secondary;
+  font-size: 20px;
+  line-height: 1.15;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  color: $clr-bg-lighter;
+}
+///=====оформление названия карточки====///
+.product-list__title::after {
+  content: '';
+  position: absolute;
+  width: 26px;
+  height: 6px;
+  background-image: url(../images/img-for-product/points.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  top: 54px;
+  @media screen and (min-width: 1280px) {
+    top: 62px;
+  }
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+///=======mobile-картинка над названием======////
+@media screen and (max-width: 767px) {
+  .product-list__product-icecream::before {
+    content: ' ';
+    position: absolute;
+    display: inline-flex;
+    background-image: url('../images/img-for-product/icecream-mob.png');
+    transform: translate(-50%, 0);
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-width: 249px;
+    min-height: 252px;
+    bottom: 44px;
+    left: 50%;
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      .product-list__product-icecream::before {
+        background-image: url('../images/img-for-product/icecream-mob@2x.png');
+      }
+    }
+  }
+  .product-list__product-icecoffee::before {
+    content: ' ';
+    position: absolute;
+    display: inline-flex;
+    background-image: url('../images/img-for-product/icecoffee-mob.png');
+    transform: translate(-50%, 0);
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-width: 249px;
+    min-height: 252px;
+    bottom: 44px;
+    left: 50%;
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      .product-list__product-icecoffee::before {
+        background-image: url('../images/img-for-product/icecoffee-mob@2.png');
+      }
+    }
+  }
+  .product-list__product-milkshake::before {
+    content: ' ';
+    position: absolute;
+    display: inline-flex;
+    background-image: url('../images/img-for-product/cocktail-mob.png');
+    transform: translate(-50%, 0);
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-width: 249px;
+    min-height: 252px;
+    bottom: 44px;
+    left: 50%;
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      .product-list__product-milkshake::before {
+        background-image: url('../images/img-for-product/cocktail-mob@2x.png');
+      }
+    }
+  }
+}
+///========tablet-картинка над названием=======////
+@media screen and (min-width: 768px) {
+  .product-list__product-icecream::before {
+    content: ' ';
+    position: absolute;
+    display: inline-flex;
+    background-image: url('../images/img-for-product/icecream-tab.png');
+    transform: translate(-50%, 0);
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-width: 220px;
+    min-height: 224px;
+    bottom: 53px;
+    left: 50%;
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      .product-list__product-icecream::before {
+        background-image: url('../images/img-for-product/icecream-tab@2x.png');
+      }
+    }
+  }
+  .product-list__product-icecoffee::before {
+    content: ' ';
+    position: absolute;
+    display: inline-flex;
+    background-image: url('../images/img-for-product/icecoffee-tab.png');
+    transform: translate(-50%, 0);
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-width: 220px;
+    min-height: 233px;
+    bottom: 53px;
+    left: 50%;
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      .product-list__product-icecoffee::before {
+        background-image: url('../images/img-for-product/icecoffee-tab@2x.png');
+      }
+    }
+  }
+  .product-list__product-milkshake::before {
+    content: ' ';
+    position: absolute;
+    display: inline-flex;
+    background-image: url('../images/img-for-product/cocktail-tab.png');
+    transform: translate(-50%, 0);
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-width: 220px;
+    min-height: 224px;
+    bottom: 53px;
+    left: 50%;
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      .product-list__product-milkshake::before {
+        background-image: url('../images/img-for-product/cocktail-tab@2x.png');
+      }
+    }
+  }
+}
+///========desktop-картинка над названием========///
+@media screen and (min-width: 1280px) {
+  .product-list__product-icecream::before {
+    content: ' ';
+    position: absolute;
+    display: inline-flex;
+    background-image: url('../images/img-for-product/icecream-desk.png');
+    transform: translate(-50%, 0);
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-width: 335px;
+    min-height: 335px;
+    bottom: 72px;
+    left: 50%;
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      .product-list__product-icecream::before {
+        background-image: url('../images/img-for-product/icecream-desk@2x.png');
+      }
+    }
+  }
+  .product-list__product-icecoffee::before {
+    content: ' ';
+    position: absolute;
+    display: inline-flex;
+    background-image: url('../images/img-for-product/icecoffee-desk.png');
+    transform: translate(-50%, 0);
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-width: 335px;
+    min-height: 335px;
+    bottom: 72px;
+    left: 50%;
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      .product-list__product-icecoffee::before {
+        background-image: url('../images/img-for-product/icecoffee-desk@2x.png');
+      }
+    }
+  }
+  .product-list__product-milkshake::before {
+    content: ' ';
+    position: absolute;
+    display: inline-flex;
+    background-image: url('../images/img-for-product/cocktail-desk.png');
+    transform: translate(-50%, 0);
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-width: 335px;
+    min-height: 335px;
+    bottom: 72px;
+    left: 50%;
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      .product-list__product-milkshake::before {
+        background-image: url('../images/img-for-product/cocktail-desk@2x.png');
+      }
+    }
+  }
+}
+///=======================================///
+///========описание продукта==============///
+.product-list__description {
+  margin-bottom: 30px;
+  text-align: center;
+  font-family: $font-main;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: $line-height;
+
+  letter-spacing: 0.04em;
+
+  color: $clr-bg-lighter;
+  @media screen and (min-width: 768px) {
+    line-height: 1.76;
+    margin-bottom: 40px;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 62px;
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .descript-hidden {
+    display: none;
+  }
+}
+///========кнопка========////
+.product-button {
+  cursor: pointer;
+  display: inline-flex;
+  height: 40px;
+  width: 40px;
+  border-color: transparent;
+  border-radius: 50%;
+  padding: 10px 10px;
+
+  transition: transform $transition-time $cubic, background-color $transition-time $cubic;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.2);
+    background-color: $clr-accent;
+  }
+  &:hover .product-button__icon,
+  &:focus .product-button__icon {
+    fill: $clr-text-lighter;
+  }
+}
+
+.product-button__icon {
+  display: block;
+  height: 15px;
+  width: 15px;
+  fill: $clr-accent;
+  transition: fill $transition-time $cubic;
+}
