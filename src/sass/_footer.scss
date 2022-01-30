@@ -1,5 +1,6 @@
 .footer-copyright__text {
-  border-top: 1px solid #e1e1e1;
+  display: block;
+  border-top: 1px solid $clr-undrline-effect;
   text-align: center;
   padding-top: 9px;
 
@@ -38,4 +39,11 @@
   color: $clr-accent;
   font-size: 34px;
   line-height: 1.15;
+}
+
+.social-list {
+  display: flex;
+  &__item:not(:last-child) {
+    padding-right: 28px;
+  }
 }
