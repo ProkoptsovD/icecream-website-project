@@ -18,4 +18,5 @@ $('.js-modal-close').click(function () {
 $('.js-modal-overlay').click(function () {
     $('.js-modal.is-show').removeClass('is-show');
     $(this).removeClass('is-show');
+    $('body').removeClass('is-hidden');
 })
