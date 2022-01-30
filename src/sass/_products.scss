@@ -3,8 +3,9 @@
   background-color: $clr-bg-the-lightest;
 }
 .product-box {
-  padding-top: 121px;
-  padding-bottom: 98px;
+  @media screen and (max-width: 767px) {
+    padding: 121px 20px 98px 20px;
+  }
 
   @media screen and (min-width: 768px) {
     padding-top: 122px;
@@ -79,8 +80,6 @@
   @media screen and (min-width: 1280px) {
     margin-bottom: 70px;
   }
-  font-style: normal;
-  font-weight: normal;
 
   font-family: $font-secondary;
   font-size: 20px;
@@ -283,7 +282,7 @@
   margin-bottom: 30px;
   text-align: center;
   font-family: $font-main;
-  font-style: normal;
+
   font-weight: 700;
   font-size: 14px;
   line-height: $line-height;
@@ -307,16 +306,16 @@
 }
 ///========кнопка========////
 .product-button {
+  cursor: pointer;
   display: inline-flex;
   height: 40px;
   width: 40px;
   border-color: transparent;
   border-radius: 50%;
   padding: 10px 10px;
-  scale: 0;
-  transition-property: scale, background-color;
-  transition-duration: $transition-time;
-  transition-timing-function: $cubic;
+
+  transition: transform $transition-time $cubic, background-color $transition-time $cubic;
+
   &:hover,
   &:focus {
     transform: scale(1.2);
@@ -333,7 +332,5 @@
   height: 15px;
   width: 15px;
   fill: $clr-accent;
-  transition-property: fill;
-  transition-duration: $transition-time;
-  transition-timing-function: $cubic;
+  transition: fill $transition-time $cubic;
 }
