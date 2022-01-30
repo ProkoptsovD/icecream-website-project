@@ -10,6 +10,7 @@
 
 .footer-contact {
   text-align: right;
+  padding-bottom: 43px;
 
   &__text {
     color: $clr-text-darker;
@@ -39,6 +40,13 @@
   color: $clr-accent;
   font-size: 34px;
   line-height: 1.15;
+  padding-bottom: 43px;
+  max-width: 200px;
+}
+
+.ice {
+  max-width: 230px;
+  padding-bottom: 17px;
 }
 
 .social-list {
@@ -46,4 +54,32 @@
   &__item:not(:last-child) {
     padding-right: 28px;
   }
+}
+
+.social-list__link {
+  display: flex;
+  width: 32px;
+  height: 32px;
+  justify-content: center;
+  align-items: center;
+  fill: $clr-bg-the-lightest;
+  background-color: #fea5bbed;
+  border-radius: 50%;
+
+  transition-property: fill, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    fill: $clr-bg-the-lightest;
+    background-color: $clr-accent;
+    border-radius: 50%;
+    border: 1px solid transparent;
+  }
+}
+
+.social-media {
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 46px;
 }
