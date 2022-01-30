@@ -14,8 +14,8 @@
     overflow: hidden;
 
     &--is-hovered {
-      animation: jello;
-      animation-duration: 1500ms;
+      animation: swing;
+      animation-duration: 2s;
       animation-iteration-count: infinite;
       z-index: 10;
     }

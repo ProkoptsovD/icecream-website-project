@@ -1,102 +1,143 @@
 <header>
-    <!-- Див общий для позиционирования контента -->
-        <div class="container">
-                <!-- логотип -->
-                <a class="logo" href="#">
-                    <img src="images/logo.png" alt="Company`s logo iceCream">
-                </a>
-                <!-- кнопки мобильного меню -->
-                <button type="button" class="menu-button">
-                    <svg width="20" height="14">
-                        <use href="images/icons.svg#burger"></use>
-                    </svg>
-                    <svg width="14" height="14">
-                        <use href="images/icons.svg#close"></use>
-                    </svg>
-                </button>
-                <!-- контейнер мобильного меню -->
-                <div class="menu-container">
-                    <nav class="nav-header">
-                        <!-- Навигация хэддер -->
-                        <ul class="nav-header__list">
-                            <li class="nav-header__item">
-                                <a class="nav-header__link" href="#home">Home</a>
-                            </li>
-                            <li class="nav-header__item">
-                                <a href="#about">About us</a>
-                            </li>
-                            <li class="nav-header__item">
-                                <a class="nav-header__link" href="#how_it's_made">How it’s made?</a>
-                            </li>
-                            <li class="nav-header__item">
-                                <a class="nav-header__link" href="#products">Our products</a>
-                            </li>
-                            <li class="nav-header__item">
-                                <a class="nav-header__link" href="#location">Contact</a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <!-- Кнопка навигации -->
-                    <button class="header-button" type="button">Buy now
-                        <!-- стрелка в кнопке -->
-                        <svg width="4" height="8">
-                            <use href="images/icons.svg#icon-arrow"></use>
-                        </svg>
-                    </button>
-                </div>
-        </div> 
-    </header>
-    <main>
-        <div class="container hero">
-            <h1 class="hero__title">ice cream made with passion</h1>
-            <ul class="hero__list">
-                <li class="hero__item">
-                    <a class="hero__link" href="#products">Products</a>
-                </li>
-                <li class="hero__item">
-                    <a class="hero__link" href="#how_it's_made">How it’s made?</a>
-                </li>
-            </ul>
-            <div>
-                <!-- Добавляю фото молока с учетом адаптивности и качесвта для ретины -->
-                <picture>
-                    <source srcset="images/desktop/milk.png 1x, images/desktop/milk@2x.png 2x" media="(min-width: 1280px)" type="image/png">
-                    <source srcset="images/table/milk.png 1x, images/table/milk@2x.png 2x" media="(min-width: 768px)" type="image/png">
-                    <img src="images/table/milk.png" alt="jug of milk">
-                </picture>
-                
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
-                <svg width="26" height="26">
-                    <use href="images/icons.svg#arrow-right"></use>
-                </svg>
-            </div>
-            <div>
-             <!-- Добавляю фото мороженного с учетом адаптивности и качества для ретины -->
-             <picture>
-                 <source srcset="images/desktop/iceCream.png 1x, images/desktop/iceCream@2x.png 2x" media="(min-width: 1280px)" type="image/png">
-                 <source srcset="images/table/iceCream.png 1x, images/table/iceCream@2x.png 2x" media="(min-width: 768px)" type="image/png">
-                 <source srcset="images/mobile/iceCream.png 1x, images/mobile/iceCream@2x.png 2x" media="(min-width: 480px)" type="image/png">
-                 <img src="images/mobile/iceCream.png" alt="Colorful ice cream in a waffle cone">
-             </picture>
-                
-        </div>
-        <ul class="establishments">
-            <li>
-                <b>16</b>
-                <p>cafes</p>
-            </li>
-            <li>
-                <b>23</b>
-                <p>food trucks</p>
-            </li>
+  <!-- Див общий для позиционирования контента -->
+  <div class="container position">
+    <!-- логотип -->
+    <a class="logo" href="#">
+      <img src="images/logo.png" alt="Company`s logo iceCream" />
+    </a>
+    <!-- кнопки мобильного меню -->
+    <button type="button" class="menu-button" data-modal-open>
+      <svg width="20" height="14">
+        <use href="images/icons.svg#burger"></use>
+      </svg>
+    </button>
+    <!-- кнопка buy now планшет + десктоп -->
+    <button class="tab-desk__button button" type="button">
+      Buy now
+      <!-- стрелка в кнопке -->
+      <svg width="5" height="8">
+        <use href="images/icons.svg#icon-arrow"></use>
+      </svg>
+    </button>
+    <!-- контейнер мобильного меню -->
+    <div class="menu-container menu-container--is-hidden" data-modal>
+      <nav class="nav-header">
+        <!-- Навигация хэддер -->
+        <button class="menu-close" aria-label="close menu" data-modal-close>
+          <svg width="14" height="14">
+            <use href="images/icons.svg#close"></use>
+          </svg>
+        </button>
+        <ul class="nav-header__list">
+          <li class="nav-header__item">
+            <a class="nav-header__link" href="#home">Home</a>
+          </li>
+          <li class="nav-header__item">
+            <a href="#about" class="nav-header__link">About us</a>
+          </li>
+          <li class="nav-header__item">
+            <a class="nav-header__link" href="#how_it's_made">How it’s made?</a>
+          </li>
+          <li class="nav-header__item">
+            <a class="nav-header__link" href="#products">Our products</a>
+          </li>
+          <li class="nav-header__item">
+            <a class="nav-header__link" href="#location">Contact</a>
+          </li>
         </ul>
-        <div>
-             <!-- Добавляю фото tasty с учетом адаптивности и качества для ретины -->
-             <picture>
-                 <source srcset="images/desktop/tasty.png 1x, images/desktop/tasty@2x.png 2x " media="(min-width: 1280px)" type="image/png">
-                 <source srcset="images/table/tasty.png 1x, images/table/tasty@2x.png 2x" media="(min-width: 768px)" type="image/png">
-                 <img src="images/table/tasty.png" alt="Girl eats ice cream in a cone">
-             </picture>    
-        </div>
-        </div>
-    </main> 
+      </nav>
+      <!-- Кнопка навигации -->
+      <button class="header-button button" type="button">
+        Buy now
+        <!-- стрелка в кнопке -->
+        <svg width="5" height="8">
+          <use href="images/icons.svg#icon-arrow"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+<main>
+  <div class="container hero">
+    <h1 class="hero__title">ice cream made with passion</h1>
+    <ul class="hero__list">
+      <li class="hero__item">
+        <a class="hero__link" href="#products">Products</a>
+      </li>
+      <li class="hero__item">
+        <a class="hero__link" href="#how_it's_made">How it’s made?</a>
+      </li>
+    </ul>
+    <div>
+      <!-- Добавляю фото молока с учетом адаптивности и качесвта для ретины -->
+      <picture>
+        <source
+          srcset="images/desktop/milk.png 1x, images/desktop/milk@2x.png 2x"
+          media="(min-width: 1280px)"
+          type="image/png"
+        />
+        <source
+          srcset="images/table/milk.png 1x, images/table/milk@2x.png 2x"
+          media="(min-width: 768px)"
+          type="image/png"
+        />
+        <img src="images/table/milk.png" alt="jug of milk" />
+      </picture>
+
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et
+      </p>
+      <svg width="26" height="26">
+        <use href="images/icons.svg#arrow-right"></use>
+      </svg>
+    </div>
+    <div>
+      <!-- Добавляю фото мороженного с учетом адаптивности и качества для ретины -->
+      <picture>
+        <source
+          srcset="images/desktop/iceCream.png 1x, images/desktop/iceCream@2x.png 2x"
+          media="(min-width: 1280px)"
+          type="image/png"
+        />
+        <source
+          srcset="images/table/iceCream.png 1x, images/table/iceCream@2x.png 2x"
+          media="(min-width: 768px)"
+          type="image/png"
+        />
+        <source
+          srcset="images/mobile/iceCream.png 1x, images/mobile/iceCream@2x.png 2x"
+          media="(min-width: 480px)"
+          type="image/png"
+        />
+        <img src="images/mobile/iceCream.png" alt="Colorful ice cream in a waffle cone" />
+      </picture>
+    </div>
+    <ul class="establishments">
+      <li>
+        <b>16</b>
+        <p>cafes</p>
+      </li>
+      <li>
+        <b>23</b>
+        <p>food trucks</p>
+      </li>
+    </ul>
+    <div>
+      <!-- Добавляю фото tasty с учетом адаптивности и качества для ретины -->
+      <picture>
+        <source
+          srcset="images/desktop/tasty.png 1x, images/desktop/tasty@2x.png 2x"
+          media="(min-width: 1280px)"
+          type="image/png"
+        />
+        <source
+          srcset="images/table/tasty.png 1x, images/table/tasty@2x.png 2x"
+          media="(min-width: 768px)"
+          type="image/png"
+        />
+        <img src="images/table/tasty.png" alt="Girl eats ice cream in a cone" />
+      </picture>
+    </div>
+  </div>
+</main>
