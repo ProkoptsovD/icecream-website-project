@@ -6,14 +6,13 @@
 
   width: 600px;
   max-width: 95%;
-  height: 600px;
-  max-height: 95%;
+  max-height: 100vh;
   padding: 15px;
   border-radius: 24px;
-  background-color: $clr-bg-the-lightest;
+  background-color: #fff;
   box-shadow: 0 8px 30px rgba(212, 20, 67, 0.5);
   z-index: 20;
-  visibility: hidden;
+  visibility: none;
   opacity: 0;
   transition: transform $transition-time $cubic, visibility $transition-time $cubic,
     opacity $transition-time $cubic;
@@ -25,32 +24,39 @@
   }
 }
 
-.modal__icon-cross {
-  position: absolute;
-  top: 25px;
-  right: 25px;
-  transform: translate(50%, -50%);
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
-  fill: currentColor;
-  transition: fill $transition-time $cubic, transform $transition-time $cubic;
+.modal__closeButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  &:hover,
-  &:focus {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+
+  width: 40px;
+  height: 40px;
+
+  cursor: pointer;
+
+  background-color: transparent;
+
+  border: none;
+
+  &:hover .modal__icon-cross {
     fill: $clr-accent;
-    transform: translate(50%, -50%) scale(1.5);
+    transform: scale(1.5);
+    transition: fill $transition-time $cubic, transform $transition-time $cubic;
   }
 }
 
-.modal__guts {
-  width: 100%;
-  height: 94%;
-  overflow: auto;
+.modal__icon-cross {
+  width: 20px;
+  height: 20px;
 }
 
 .modal__title {
-  margin-bottom: 15px;
+  display: block;
+  margin: 20px 0;
   text-align: center;
   font-weight: 700;
   font-size: 16px;
@@ -78,4 +84,134 @@
 
 .is-hidden {
   overflow: hidden;
+}
+
+// -----------Ниже идут стили самой формы----------
+
+.form {
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-top: 12px;
+
+  @media screen and (min-width: 0px) and (max-width: 450px) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+.form__inputBox {
+  display: block;
+}
+
+.form__inputTitle {
+  display: block;
+  padding-left: 15px;
+  margin-bottom: 5px;
+}
+
+.form__input {
+  padding: 10px 20px;
+  display: block;
+  width: 100%;
+  background-color: $clr-brand;
+  border-radius: 190px;
+  border: $clr-bg-the-lightest 2px solid;
+
+  margin-bottom: 30px;
+
+  &:hover,
+  &:focus {
+    border: $clr-brand-darker 2px solid;
+    cursor: pointer;
+    outline: none;
+    transition: $cubic 250ms;
+  }
+
+  .form__inputBox:hover &,
+  .form__inputBox:focus & {
+    border: $clr-brand-the-darkest 2px solid;
+  }
+}
+
+.form__cityholder {
+  visibility: hidden;
+}
+
+.form__agreement {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+
+  font-size: 16px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &::before {
+    content: '';
+    width: 23px;
+    height: 23px;
+
+    border: 2px solid $clr-brand;
+    border-radius: 50%;
+
+    margin-right: 10px;
+  }
+
+  @media screen and (min-width: 0px) and (max-width: 350px) {
+    justify-content: left;
+    font-size: 14px;
+  }
+}
+
+.form__checkbox {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  border: 2px;
+
+  margin: -1px;
+  padding: 0px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+
+  &:focus + .form__agreement::before {
+    border: 2px solid $clr-brand-the-darkest;
+  }
+
+  &:checked + .form__agreement::before {
+    background-color: $clr-brand-the-darkest;
+    background-image: url(/images/circle.svg);
+    background-size: 12px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+.form__submit {
+  padding: 15px 95px;
+  border-radius: 190px;
+  border: transparent;
+  background-color: $clr-brand-darker;
+  font-size: 24px;
+  color: #fff;
+  display: block;
+  margin: 0 auto;
+
+  &:hover,
+  &:focus {
+    box-shadow: 2px 6px 6px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    transition: box-shadow $cubic 250ms;
+  }
+
+  @media screen and (min-width: 0px) and (max-width: 767px) {
+    padding: 10px 55px;
+  }
 }
