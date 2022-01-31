@@ -2,17 +2,25 @@
   padding-top: 97px;
   background-image: linear-gradient(
     to bottom,
-    $clr-bg-normal 40%,
-    $clr-bg-the-lightest 40%,
+    $clr-bg-normal 50%,
+    $clr-bg-the-lightest 50%,
     $clr-bg-the-lightest 100%
   );
 }
 
 .grid {
   &__thumb {
-    border-radius: 20px;
+    border-radius: 5px;
     overflow: hidden;
 
+    @media screen and (min-width: 768px) {
+      border-radius: 12px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      border-radius: 20px;
+    }
+    
     &--is-hovered {
       animation: swing;
       animation-duration: 2s;
