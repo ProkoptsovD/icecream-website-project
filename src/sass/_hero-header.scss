@@ -106,7 +106,6 @@
 }
 
 .tab-desk__button {
-
   &:hover,
   &:focus {
     background-color: #ecebeb;
@@ -219,7 +218,6 @@
 }
 
 .hero {
-
   position: relative;
   padding-top: 136px;
   overflow: hidden;
@@ -245,10 +243,9 @@
     padding-top: 119px;
     // отрицательный маржин
     margin-top: -35px;
-
   }
 
-  // ======= Анимация заголовка и ссылок героя. 
+  // ======= Анимация заголовка и ссылок героя.
   // ======= Задана ширина заголовку
   .container-animate-hero-title {
     position: relative;
@@ -275,7 +272,6 @@
     letter-spacing: $letter-spacing;
     color: $clr-text-lighter;
     margin-bottom: 19px;
-    
 
     @media screen and (min-width: 768px) {
       font-size: 22px;
@@ -284,7 +280,7 @@
     }
 
     @media screen and (min-width: 1280px) {
-    // уменьшен размер на 3 пикселя
+      // уменьшен размер на 3 пикселя
       font-size: 35px;
       line-height: 1.157;
       margin-bottom: 25px;
@@ -324,7 +320,6 @@
     @media screen and (min-width: 1280px) {
       margin-bottom: 56px;
     }
-
   }
 
   // ======= Стили ссылок, общие
@@ -361,9 +356,7 @@
   &__products-link {
     background-color: $clr-accent;
     color: $clr-text-lighter;
-    transition: transform $transition-time $cubic,
-      background-color $transition-time $cubic;
-
+    transition: transform $transition-time $cubic, background-color $transition-time $cubic;
 
     &:hover,
     &:focus {
@@ -387,17 +380,15 @@
   &__about-link {
     background-color: $clr-bg-the-lightest;
     color: $clr-accent;
-    transition: transform $transition-time $cubic,
-      background-color $transition-time $cubic;
+    transition: transform $transition-time $cubic, background-color $transition-time $cubic;
 
     &:hover,
     &:focus {
       // внести в переменную цвет при ховеру
       transform: scale(1.2);
-      background-color: #ECEBEB;
+      background-color: #ecebeb;
     }
   }
-
 }
 
 //======= Информация о биосвойствах молока используемого для приготовления мороженного
@@ -412,7 +403,6 @@
 
   @media screen and (min-width: 1280px) {
     margin-bottom: 45px;
-
   }
 
   //======= Фоновое изображение "Jug of milk"
@@ -425,7 +415,6 @@
 
     @media screen and (min-width: 1280px) {
       margin-right: 30px;
-
     }
   }
 
@@ -463,8 +452,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: transform $transition-time $cubic,
-      background-color $transition-time $cubic;
+    transition: transform $transition-time $cubic, background-color $transition-time $cubic;
+
+    cursor: pointer;
 
     &:hover,
     &:focus {
@@ -481,7 +471,6 @@
     &:focus .thumb-information__icon {
       fill: $clr-text-lighter;
     }
-
   }
 }
 
@@ -502,12 +491,11 @@
   }
 
   &__item {
-
     position: relative;
 
     // ======= before относительно Li
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       top: -3px;
       right: -7px;
@@ -526,7 +514,6 @@
 
     //  ======= Нижний маржин между элеентами списка
     &:not(:last-child) {
-
       @media screen and (min-width: 768px) {
         margin-bottom: 13px;
       }
@@ -545,11 +532,9 @@
     text-transform: uppercase;
     color: $clr-accent;
 
-
     @media screen and (min-width: 1280px) {
       font-size: 46px;
       line-height: 1.152;
-
     }
   }
 
@@ -561,7 +546,6 @@
     @media screen and (min-width: 1280px) {
       font-size: 14px;
       line-height: 1.285;
-
     }
   }
 }
