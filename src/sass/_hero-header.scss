@@ -73,6 +73,7 @@
 .menu-button {
   background-color: transparent;
   border: none;
+  cursor: pointer;
 
   @media screen and (min-width: 1280px) {
     display: none;
@@ -91,6 +92,7 @@
   position: absolute;
   top: 23px;
   right: 28px;
+  cursor: pointer;
 
   @media screen and (min-width: 768px) {
     right: 34px;
