@@ -64,6 +64,7 @@
     right: 0;
     padding: 60px 20px;
   }
+
   @media screen and (min-width: 1280px) {
     display: flex;
     align-items: center;
@@ -105,6 +106,7 @@
 }
 
 .tab-desk__button {
+
   &:hover,
   &:focus {
     background-color: #ecebeb;
@@ -215,7 +217,9 @@
 .section-hero {
   background-color: $clr-brand;
 }
+
 .hero {
+
   position: relative;
   padding-top: 136px;
   overflow: hidden;
@@ -223,20 +227,32 @@
   background-repeat: no-repeat;
   background-position: calc(100% + 64px) 27px;
 
+  // ======== размещение круга в герое
   @media screen and (min-width: 768px) {
     background-size: 324px 322px;
     background-position: calc(100% - 103px) 0;
-    padding-top: 56px;
+
+    // верхний паддинг плюс отрицательный маржин 15+56=71px
+    padding-top: 71px;
+    // отрицательный маржин 87-31=56px
     margin-top: -56px;
   }
+
   @media screen and (min-width: 1280px) {
     background-size: 538px 538px;
     background-position: calc(100% - 170px) 0;
-    padding-top: 136px;
-    margin-top: -52px;
+    // верхний паддинг плюс отрицательный маржин 84+35=119px
+    padding-top: 119px;
+    // отрицательный маржин
+    margin-top: -35px;
+
   }
 
-  .container-title {
+  // ======= Анимация заголовка и ссылок героя. 
+  // ======= Задана ширина заголовку
+  .container-animate-hero-title {
+    position: relative;
+    z-index: 3;
     width: 218px;
 
     @media screen and (min-width: 768px) {
@@ -249,24 +265,29 @@
     }
   }
 
+  // ======= Стили заголовка, нижний отступ от заголовка к ссылкам
   &__title {
     position: relative;
-    margin-bottom: 19px;
-    z-index: 2;
     font-family: $font-secondary;
     font-size: 26px;
     line-height: 1.153;
     text-transform: uppercase;
     color: $clr-text-lighter;
+    margin-bottom: 19px;
 
     @media screen and (min-width: 768px) {
-      font-size: 26px;
+      font-size: 22px;
+      line-height: 1.136;
+      margin-bottom: 20px;
     }
+
     @media screen and (min-width: 1280px) {
       font-size: 38px;
       line-height: 1.157;
+      margin-bottom: 25px;
     }
 
+    // Стиль span заголовка "Passion"
     &--change-color {
       font-size: 48px;
       line-height: 0.95;
@@ -282,19 +303,9 @@
         line-height: 0.91;
       }
     }
-
-    @media screen and (min-width: 768px) {
-      font-size: 22px;
-      line-height: 1.136;
-      margin-bottom: 20px;
-    }
-
-    @media screen and (min-width: 1280px) {
-      font-size: 38px;
-      line-height: 1.157;
-      margin-bottom: 25px;
-    }
   }
+
+  // ======= Список ссылок заголовка
   &__list {
     position: relative;
     display: flex;
@@ -309,31 +320,11 @@
 
     @media screen and (min-width: 1280px) {
       margin-bottom: 56px;
-      margin-left: 38px;
     }
-  }
-  &__products {
-    width: 62px;
-    height: 24px;
-    margin-right: 8px;
 
-    @media screen and (min-width: 1280px) {
-      width: 104px;
-      height: 40px;
-      margin-right: 15px;
-    }
   }
 
-  &__item {
-    width: 83px;
-    height: 24px;
-
-    @media screen and (min-width: 1280px) {
-      width: 138px;
-      height: 40px;
-    }
-  }
-
+  // ======= Стили ссылок, общие
   &__link {
     display: inline-flex;
     justify-content: center;
@@ -350,25 +341,63 @@
     }
   }
 
+  // ======= Ссылка Products
+  &__products {
+    width: 62px;
+    height: 24px;
+    margin-right: 8px;
+
+    @media screen and (min-width: 1280px) {
+      width: 104px;
+      height: 40px;
+      margin-right: 15px;
+    }
+  }
+
+  // ======= Стиль ссылки Product
   &__products-link {
     background-color: $clr-accent;
     color: $clr-text-lighter;
+    transition: transform $transition-time $cubic,
+      background-color $transition-time $cubic;
 
-    &:hover {
+
+    &:hover,
+    &:focus {
+      transform: scale(1.2);
       background-color: $clr-accent-darker;
     }
   }
 
+  // ======= Ссылка About
+  &__about {
+    width: 83px;
+    height: 24px;
+
+    @media screen and (min-width: 1280px) {
+      width: 138px;
+      height: 40px;
+    }
+  }
+
+  // ======= Стиль ссылки About
   &__about-link {
     background-color: $clr-bg-the-lightest;
     color: $clr-accent;
+    transition: transform $transition-time $cubic,
+      background-color $transition-time $cubic;
 
-    &:hover {
+    &:hover,
+    &:focus {
       // внести в переменную цвет при ховеру
-      background-color: #ecebeb;
+      transform: scale(1.2);
+      background-color: #ECEBEB;
     }
   }
+
 }
+
+//======= Информация о биосвойствах молока используемого для приготовления мороженного
 .bio-information-thumb {
   display: none;
 
@@ -380,48 +409,80 @@
 
   @media screen and (min-width: 1280px) {
     margin-bottom: 45px;
-  }
-}
 
-.bio-information {
-  display: none;
-  @media screen and (min-width: 768px) {
+  }
+
+  //======= Фоновое изображение "Jug of milk"
+  .picture-milk {
+    display: none;
+
+    @media screen and (min-width: 768px) {
+      display: block;
+    }
+
+    @media screen and (min-width: 1280px) {
+      margin-right: 30px;
+
+    }
+  }
+
+  // ======= Информационный блок о био свойствах молока и модальное окно
+  .thumb-information {
+    display: none;
+
+    @media screen and (min-width: 768px) {
+      display: block;
+    }
+  }
+
+  .thumb-information__text {
     display: block;
+    font-size: 8px;
+    line-height: 1.5;
+    color: $clr-text-lighter;
+    width: 114px;
+    margin-bottom: 7px;
+
+    @media screen and (min-width: 1280px) {
+      font-size: 14px;
+      line-height: 1.4;
+      width: 200px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .thumb-information__button {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: none;
+    background-color: $clr-bg-the-lightest;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform $transition-time $cubic,
+      background-color $transition-time $cubic;
+
+    &:hover,
+    &:focus {
+      transform: scale(1.2);
+      background-color: $clr-accent;
+    }
+
+    .thumb-information__icon {
+      fill: $clr-accent;
+      transition: fill $transition-time $cubic;
+    }
+
+    &:hover .thumb-information__icon,
+    &:focus .thumb-information__icon {
+      fill: $clr-text-lighter;
+    }
+
   }
 }
 
-.bio-information__text {
-  display: block;
-  font-size: 8px;
-  line-height: 1.5;
-  color: $clr-text-lighter;
-  width: 114px;
-  margin-bottom: 7px;
-
-  @media screen and (min-width: 1280px) {
-    font-size: 14px;
-    line-height: 1.4;
-    width: 200px;
-    margin-bottom: 20px;
-  }
-}
-
-.bio-information__button {
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  border: none;
-  background-color: $clr-bg-the-lightest;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.bio-information__icon {
-  fill: $clr-accent;
-}
-
-// количесвто заведений
+//=========== Контейнер количества заведений компании
 .establishments {
   display: none;
 
@@ -438,10 +499,12 @@
   }
 
   &__item {
+
     position: relative;
 
+    // ======= before относительно Li
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       top: -3px;
       right: -7px;
@@ -457,10 +520,14 @@
         height: 30px;
       }
     }
+
+    //  ======= Нижний маржин между элеентами списка
     &:not(:last-child) {
+
       @media screen and (min-width: 768px) {
         margin-bottom: 13px;
       }
+
       @media screen and (min-width: 1280px) {
         margin-bottom: 15px;
       }
@@ -475,9 +542,11 @@
     text-transform: uppercase;
     color: $clr-accent;
 
+
     @media screen and (min-width: 1280px) {
       font-size: 46px;
       line-height: 1.152;
+
     }
   }
 
@@ -489,13 +558,14 @@
     @media screen and (min-width: 1280px) {
       font-size: 14px;
       line-height: 1.285;
+
     }
   }
 }
 
-// позиционировани картинок
+//=======  Абсолютное позиционировани картинок Hero
 
-// мороженное
+//======= Фоновое изображение "IceCream"
 
 .ice-cream {
   position: absolute;
@@ -514,20 +584,10 @@
   }
 }
 
-// кувшин с молоком
-.milk {
-  display: none;
-  @media screen and (min-width: 768px) {
-    display: block;
-  }
-  @media screen and (min-width: 1280px) {
-    margin-right: 30px;
-  }
-}
-
-// девушка с мороженным
+//======= Фоновое изображение картинки "Tasty"
 .tasty-ice {
   display: none;
+
   @media screen and (min-width: 768px) {
     display: block;
     position: absolute;
