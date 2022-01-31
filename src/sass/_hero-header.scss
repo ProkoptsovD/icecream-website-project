@@ -1,47 +1,17 @@
 .header {
-  height: 56px;
   padding-top: 6px;
   background-color: $clr-brand;
 
   @media screen and (min-width: 768px) {
     padding-top: 37px;
   }
-
-  @media screen and (min-width: 768px) {
-    height: 87px;
-    z-index: 1;
-  }
-  //  спрятала кнопки мобильного меню
-  .menu-button {
-    @media screen and (min-width: 768px) {
-      display: none;
-    }
-  }
 }
 
-.nav-header {
-  display: flex;
-
-  .nav-header__list {
-    display: flex;
-  }
-
-  .nav-header__link {
-    font-weight: 700;
-    color: $clr-text-lighter;
-    line-height: 1.285;
-  }
-
-  .nav-header__link--active {
-    color: $clr-accent;
-  }
-}
-
-// Кнопки мобильного меню
 .position {
   position: relative;
   display: flex;
   align-items: center;
+  z-index: 10;
 }
 
 .logo__position {
@@ -238,15 +208,6 @@
     @media screen and (min-width: 1280px) {
       margin-right: 35px;
     }
-  }
-}
-// мобильное меню
-
-.menu-container {
-  display: none;
-
-  @media screen and (min-width: 1280px) {
-    display: block;
   }
 }
 
