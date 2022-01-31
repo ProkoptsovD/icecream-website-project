@@ -1,0 +1,66 @@
+<header class="header section" id="home">
+    <!-- Див общий для позиционирования контента -->
+    <div class="container position">
+        <!-- логотип -->
+        <a class="logo logo__position" href="#">
+            <img src="images/logo.png" alt="Company`s logo iceCream" />
+        </a>
+
+        <!-- кнопки мобильного меню -->
+        <button type="button" class="menu-button menu-button__position" data-modal-open>
+            <svg width="20" height="14">
+                <use href="images/icons.svg#burger"></use>
+            </svg>
+        </button>
+
+        <!-- кнопка buy now планшет + десктоп -->
+        <button class="tab-desk__button button js-open-modal" type="button" data-modal="Modal">
+            Buy now
+            <!-- стрелка в кнопке -->
+            <svg width="5" height="8">
+                <use href="images/icons.svg#icon-arrow"></use>
+            </svg>
+        </button>
+
+        <!-- контейнер мобильного меню -->
+        <div class="menu-container menu-container--is-hidden" data-modal>
+            <div class="mobile-nav">
+                <!-- Навигация хэддер -->
+                <div class="nav-header">
+                    <button class="menu-close" aria-label="close menu" data-modal-close>
+                        <svg width="14" height="14">
+                            <use href="images/icons.svg#close"></use>
+                        </svg>
+                    </button>
+                    <nav>
+                        <ul class="nav-header__list">
+                            <li class="nav-header__item">
+                                <a href="#home" class="nav-header__link">Home</a>
+                            </li>
+                            <li class="nav-header__item">
+                                <a href="#about" class="nav-header__link">About us</a>
+                            </li>
+                            <li class="nav-header__item">
+                                <a href="#how_it's_made" class="nav-header__link">How it’s made?</a>
+                            </li>
+                            <li class="nav-header__item">
+                                <a href="#products" class="nav-header__link">Our products</a>
+                            </li>
+                            <li class="nav-header__item">
+                                <a href="#locations" class="nav-header__link">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <!-- Кнопка навигации -->
+                <button class="header-button button js-open-modal" type="button" data-modal="Modal">
+                    Buy now
+                    <!-- стрелка в кнопке -->
+                    <svg width="5" height="8">
+                        <use href="images/icons.svg#icon-arrow"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</header>
