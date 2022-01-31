@@ -150,10 +150,16 @@
 .modal__about-subtitle {
   color: $clr-text-darker;
   font-weight: 600;
+  margin-bottom: 10px;
 }
 
 .modal__about-text {
   @media screen and (max-width: 767px) {
     display: none;
+  }
+  @media screen and (min-width: 768px){
+    &:not(:last-child) {
+    margin-bottom: 20px;
+    }
   }
 }
