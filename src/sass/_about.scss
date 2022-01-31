@@ -9,22 +9,21 @@
   }
 }
 .container-milk {
-  max-width: 1282px;
-  min-height: 133px;
+  width: 320px;
+  margin-left: auto;
+  margin-right: auto;
   background-image: url(../images/milk-drops/milk-drops-mob-1x.png);
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
+  background-position: top 610px left 0;
+  background-size: 100% auto;
 
   @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
     background-image: url(../images/milk-drops/milk-drops-mob-2x.png);
   }
 
   @media screen and (min-width: 768px) {
-    margin-left: auto;
-    margin-right: auto;
-    //min-height: 420px;
-    padding-bottom: 65px; //not sure, I'll check it
+    width: 768px;
+    background-position: top 200px left 0;
     background-image: url(../images/milk-drops/milk-drops-tab-1x.png);
 
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
@@ -33,10 +32,9 @@
   }
 
   @media screen and (min-width: 1280px) {
-    margin-left: auto;
-    margin-right: auto;
-    min-height: 534px;
-    padding-bottom: 65px;
+    width: 1280px;
+    padding-top: 217px;
+    background-position: top 430px left 0;
     background-image: url(../images/milk-drops/milk-drops-desktop-1x.png);
 
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
@@ -131,6 +129,11 @@
 .button__svg {
   margin-left: 16px;
 }
+
+.button__about:hover {
+  color: #D41443;
+    background-color: #ECEBEB;
+  }
 
 .modal__about {
   transition-duration: 500ms;
