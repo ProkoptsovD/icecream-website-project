@@ -4,6 +4,8 @@
   left: 50%;
   transform: translate(-50%, -50%) scale(0.2);
 
+  pointer-events: none;
+
   width: 600px;
   max-width: 95%;
   max-height: 100vh;
@@ -21,6 +23,7 @@
     transform: translate(-50%, -50%) scale(1);
     opacity: 1;
     visibility: visible;
+    pointer-events: all;
   }
 }
 
