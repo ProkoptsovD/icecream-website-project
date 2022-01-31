@@ -9,7 +9,7 @@
                 <div class="product-list__box">
                     <h3 class="product-list__title product-list__product-icecream">ice cream</h3>
                     <p class="product-list__description ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et<span class="descript-hidden">. dolore magna aliqua facilisis.</span></p>
-                    <button class="product-button ">
+                    <button data-modal="products-icecream" class="product-button js-open-modal">
                         <svg class="product-button__icon">
                             <use href="images/icons.svg#arrow-right"></use>
                         </svg>
@@ -20,7 +20,7 @@
                 <div class="product-list__box">
                     <h3 class="product-list__title product-list__product-icecoffee">ice coffee</h3>
                     <p class="product-list__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et<span class="descript-hidden">. dolore magna aliqua facilisis.</span></p>
-                    <button class="product-button">
+                    <button data-modal="products-icecoffee" class="product-button js-open-modal">
                         <svg class="product-button__icon">
                             <use href="images/icons.svg#arrow-right"></use>
                         </svg>
@@ -31,7 +31,7 @@
                 <div class="product-list__box">
                     <h3 class="product-list__title product-list__product-milkshake">milkshakes</h3>
                     <p class="product-list__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et<span class="descript-hidden">. dolore magna aliqua facilisis.</span></p>            
-                    <button class="product-button">
+                    <button data-modal="products-milkshakes" class="product-button js-open-modal">
                         <svg class="product-button__icon">
                             <use href="images/icons.svg#arrow-right"></use>
                         </svg>
@@ -40,5 +40,39 @@
             </li>
         </ul>
     </div>
-
+                        <!--Modal-->
+    <div class="modal js-modal" data-modal="products-icecream">
+        <svg width="14" height="14" class="modal__icon-cross js-modal-close">
+            <use href="./images/icons.svg#cross"></use>
+        </svg>
+        <p class="modal__title product-modal__title">ice cream</p>
+        <div class="modal__guts product-modal__ithem">
+            <p class="product-modal__text">Lorem ipsum dolor sit amet</p>
+            <p class="product-modal__text">Lorem ipsum dolor sit amet</p>
+            <p class="product-modal__text">Lorem ipsum dolor sit amet</p>
+        </div>
+    </div>
+    <div class="modal js-modal" data-modal="products-icecoffee">
+         <svg width="14" height="14" class="modal__icon-cross js-modal-close">
+              <use href="./images/icons.svg#cross"></use>
+        </svg>
+        <p class="modal__title product-modal__title">ice coffee</p>
+        <div class="modal__guts product-modal__ithem">
+                <p class="product-modal__text">Lorem ipsum dolor sit amet</p>
+                <p class="product-modal__text">Lorem ipsum dolor sit amet</p>
+                <p class="product-modal__text">Lorem ipsum dolor sit amet</p>
+        </div>
+    </div>
+    <div class="modal js-modal" data-modal="products-milkshakes">
+         <svg width="14" height="14" class="modal__icon-cross js-modal-close">
+             <use href="./images/icons.svg#cross"></use>
+        </svg>
+        <p class="modal__title product-modal__title">milkshakes</p>
+        <div class="modal__guts product-modal__ithem">
+            <p class="product-modal__text">Lorem ipsum dolor sit amet</p>
+            <p class="product-modal__text">Lorem ipsum dolor sit amet</p>
+            <p class="product-modal__text">Lorem ipsum dolor sit amet</p>
+            <p class="product-modal__text">Lorem ipsum dolor sit amet</p>
+        </div>
+    </div>
 </section>

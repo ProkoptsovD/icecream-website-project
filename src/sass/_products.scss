@@ -334,3 +334,38 @@
   fill: $clr-accent;
   transition: fill $transition-time $cubic;
 }
+///=======Modal========///
+.product-modal__title {
+  margin-top: 20px;
+  font-family: $font-main;
+  font-size: 20px;
+  line-height: 1.15;
+
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $clr-brand-the-darkest;
+}
+.product-modal__ithem {
+  padding: 10px;
+}
+.product-modal__text {
+  font-family: DM Sans;
+  font-size: 14px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.04em;
+  margin-top: 5px;
+  &::before {
+    content: ' ';
+    display: inline-block;
+    margin-right: 5px;
+    border-radius: 50%;
+    background-image: url('../images/img-for-product/prod-check.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 10px;
+    height: 10px;
+    background-color: $clr-accent;
+  }
+}
