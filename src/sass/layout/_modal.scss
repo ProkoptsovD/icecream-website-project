@@ -1,0 +1,81 @@
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.2);
+
+  width: 600px;
+  max-width: 95%;
+  height: 600px;
+  max-height: 95%;
+  padding: 15px;
+  border-radius: 24px;
+  background-color: $clr-bg-the-lightest;
+  box-shadow: 0 8px 30px rgba(212, 20, 67, 0.5);
+  z-index: 20;
+  visibility: hidden;
+  opacity: 0;
+  transition: transform $transition-time $cubic, visibility $transition-time $cubic,
+    opacity $transition-time $cubic;
+
+  &.is-show {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.modal__icon-cross {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  transform: translate(50%, -50%);
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  fill: currentColor;
+  transition: fill $transition-time $cubic, transform $transition-time $cubic;
+
+  &:hover,
+  &:focus {
+    fill: $clr-accent;
+    transform: translate(50%, -50%) scale(1.5);
+  }
+}
+
+.modal__guts {
+  width: 100%;
+  height: 94%;
+  overflow: auto;
+}
+
+.modal__title {
+  margin-bottom: 15px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.32;
+  color: $clr-accent;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  visibility: hidden;
+  opacity: 0;
+
+  &.is-show {
+    opacity: 1;
+    visibility: visible;
+    overflow-y: scroll;
+  }
+}
+
+.is-hidden {
+  overflow: hidden;
+}
