@@ -1,4 +1,11 @@
 .header {
+  padding-top: 6px;
+  background-color: $clr-brand;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 37px;
+  }
+}
     background-color: $clr-brand;
     height: 56px;
 
@@ -31,17 +38,22 @@
     .nav-header__link--active {
         color: $clr-accent;
     }
-
 }
 
 // Кнопки мобильного меню
 .position {
   position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.logo__position {
+  margin-right: auto;
 }
 
 .menu-container {
   @media screen and (max-width: 1279px) {
-    width: 250px;
+    width: 100vw;
     height: 100vh;
     padding: 60px 20px;
     position: fixed;
@@ -49,22 +61,63 @@
     right: 0;
     background-color: $clr-brand-the-darkest;
     z-index: 100;
-    transform: translateX(0);
-    transition: transform 250ms $cubic;
-  }
+    opacity: 1;
+    transition: opacity 250ms $cubic;
+    background-color: rgba(#000000, 0.4);
 
-  @media screen and (min-width: 768px) and (max-width: 1279px) {
-    width: 254px;
+    .mobile-nav {
+      transform: translateX(0);
+      transition: transform 250ms $cubic 250ms;
+    }
   }
 
   &--is-hidden {
-    transform: translateX(100%);
+    @media screen and (max-width: 1279px) {
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 250ms $cubic 250ms;
+    }
+
+    .mobile-nav {
+      @media screen and (max-width: 1279px) {
+        transform: translateX(254px);
+        transition: transform 250ms $cubic;
+      }
+    }
+  }
+}
+
+.mobile-nav {
+  @media screen and (max-width: 1279px) {
+    width: 250px;
+    height: 100vh;
+    background-color: $clr-brand-the-darkest;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 60px 20px;
+  }
+  @media screen and (min-width: 1280px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 }
 
 .menu-button {
   background-color: transparent;
   border: none;
+  cursor: pointer;
+
+  @media screen and (min-width: 1280px) {
+    display: none;
+  }
+
+  &__position {
+    @media screen and (min-width: 768px) {
+      margin-right: 30px;
+    }
+  }
 }
 
 .menu-close {
@@ -73,24 +126,51 @@
   position: absolute;
   top: 23px;
   right: 28px;
+  cursor: pointer;
 
   @media screen and (min-width: 768px) {
     right: 34px;
   }
+
+  @media screen and (min-width: 1280px) {
+    display: none;
+  }
 }
 
 .tab-desk__button {
+  &:hover,
+  &:focus {
+    background-color: #ecebeb;
+    color: $clr-accent;
+  }
+
   @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: block;
+    margin-right: 24px;
+  }
+
+  @media screen and (min-width: 1280px) {
     display: none;
   }
 }
 
 .header-button {
-  @media screen and (max-width: 767px) {
-    position: absolute;
+  position: absolute;
+  min-width: 209px;
+
+  &:hover,
+  &:focus {
+    background-color: #ecebeb;
+    color: $clr-accent;
+  }
+
+  @media screen and (min-width: 300px) and (max-width: 767px) {
     top: 60px;
     right: 20px;
-    min-width: 209px;
 
     & svg {
       margin-left: 16px;
@@ -98,8 +178,8 @@
   }
 
   @media screen and (min-width: 768px) and (max-width: 1279px) {
-    position: absolute;
     top: 60px;
+    right: 20px;
     right: 34px;
     min-width: 186px;
 
@@ -107,11 +187,36 @@
       margin-left: 14px;
     }
   }
+
+  @media screen and (min-width: 1280px) {
+    position: relative;
+    min-width: 159px;
+
+    & svg {
+      margin-left: 12px;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    background-color: #ecebeb;
+    color: $clr-accent;
+  }
 }
 
 .nav-header {
-  @media screen and (max-width: 1279px) {
-    margin-top: 76px;
+  @media screen and (min-width: 1280px) {
+    margin-right: 110px;
+  }
+
+  &__list {
+    @media screen and (max-width: 1279px) {
+      margin-top: 76px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      display: flex;
+    }
   }
 
   &__link {
@@ -131,6 +236,10 @@
   &:not(:last-child) {
     @media screen and (max-width: 1279px) {
       margin-bottom: 23px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      margin-right: 35px;
     }
   }
 }
