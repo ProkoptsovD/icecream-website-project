@@ -1,89 +1,98 @@
-<header class="header">
-    <!-- Див общий для позиционирования контента -->
-        <div class="container">
-                <!-- логотип -->
-                <a class="logo" href="#">
-                    <img src="images/logo.png" alt="Company`s logo iceCream">
-                </a>
-                <!-- кнопки мобильного меню -->
-                <button type="button" class="menu-button" data-modal-open>
-                    <svg width="20" height="14">
-                    <use href="images/icons.svg#burger"></use>
-                    </svg>
-                </button>
-                <!-- кнопка buy now планшет + десктоп -->
-                <button class="tab-desk__button button js-open-modal" type="button" data-modal="Modal">
-                    Buy now
-                    <!-- стрелка в кнопке -->
-                    <svg width="5" height="8">
-                    <use href="images/icons.svg#icon-arrow"></use>
-                    </svg>
-                </button>
-                <!-- контейнер мобильного меню -->
-                <div class="menu-container menu-container--is-hidden" data-modal>
-                    <nav class="nav-header">
-                        <!-- Навигация хэддер -->
-                        <button class="menu-close" aria-label="close menu" data-modal-close>
-                        <svg width="14" height="14">
-                            <use href="images/icons.svg#close"></use>
-                        </svg>
-                        </button>
-                        <ul class="nav-header__list">
-                        <li class="nav-header__item">
-                            <a class="nav-header__link" href="#home">Home</a>
-                        </li>
-                        <li class="nav-header__item">
-                            <a href="#about" class="nav-header__link">About us</a>
-                        </li>
-                        <li class="nav-header__item">
-                            <a class="nav-header__link" href="#how_it's_made">How it’s made?</a>
-                        </li>
-                        <li class="nav-header__item">
-                            <a class="nav-header__link" href="#products">Our products</a>
-                        </li>
-                        <li class="nav-header__item">
-                            <a class="nav-header__link" href="#location">Contact</a>
-                        </li>
-                        </ul>
-                    </nav>
-                    <!-- Кнопка навигации -->
-                  <button class="header-button button js-open-modal" type="button" data-modal="Modal">
-                    Buy now
-                    <!-- стрелка в кнопке -->
-                    <svg width="5" height="8">
-                    <use href="images/icons.svg#icon-arrow"></use>
-                    </svg>
-                </button>
-                </div>
-            </div>
-            </header>
-        <main>
-        <section class="section-hero">
-        <div class="container hero">
-            <div class="container-title">
-                <h1 class="hero__title">ice cream made with <span class="hero__title--change-color">passion</span></h1>
-            </div>
-            <ul class="hero__list">
-                <li class="hero__products">
-                    <a class="hero__products-link hero__link" href="#products">Products</a>
-                </li>
-                <li class="hero__item">
-                    <a class="hero__link hero__about-link" href="#how_it's_made">How it’s made?</a>
-                </li>
+<header class="header section" id="home">
+  <!-- Див общий для позиционирования контента -->
+  <div class="container position">
+    <!-- логотип -->
+    <a class="logo logo__position" href="#">
+      <img src="images/logo.png" alt="Company`s logo iceCream" />
+    </a>
+
+    <!-- кнопки мобильного меню -->
+    <button type="button" class="menu-button menu-button__position" data-modal-open>
+      <svg width="20" height="14">
+        <use href="images/icons.svg#burger"></use>
+      </svg>
+    </button>
+
+    <!-- кнопка buy now планшет + десктоп -->
+    <button class="tab-desk__button button" type="button">
+      Buy now
+      <!-- стрелка в кнопке -->
+      <svg width="5" height="8">
+        <use href="images/icons.svg#icon-arrow"></use>
+      </svg>
+    </button>
+
+    <!-- контейнер мобильного меню -->
+    <div class="menu-container menu-container--is-hidden" data-modal>
+      <div class="mobile-nav">
+        <!-- Навигация хэддер -->
+        <div class="nav-header">
+          <button class="menu-close" aria-label="close menu" data-modal-close>
+            <svg width="14" height="14">
+              <use href="images/icons.svg#close"></use>
+            </svg>
+          </button>
+          <nav>
+            <ul class="nav-header__list">
+              <li class="nav-header__item">
+                <a href="#home" class="nav-header__link">Home</a>
+              </li>
+              <li class="nav-header__item">
+                <a href="#about" class="nav-header__link">About us</a>
+              </li>
+              <li class="nav-header__item">
+                <a href="#how_it's_made" class="nav-header__link">How it’s made?</a>
+              </li>
+              <li class="nav-header__item">
+                <a href="#products" class="nav-header__link">Our products</a>
+              </li>
+              <li class="nav-header__item">
+                <a href="#locations" class="nav-header__link">Contact</a>
+              </li>
             </ul>
+          </nav>
+        </div>
+        <!-- Кнопка навигации -->
+        <button class="header-button button" type="button">
+          Buy now
+          <!-- стрелка в кнопке -->
+          <svg width="5" height="8">
+            <use href="images/icons.svg#icon-arrow"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+<main>
+ <section class="section-hero">
+        <div class="container hero">
+            <div class="container-animate-hero-title animate__animated animate__fadeInLeft">
+                <div class="container-title" >
+                    <h1 class="hero__title ">ice cream made with <span class="hero__title--change-color">passion</span></h1>
+                </div>
+                <ul class="hero__list">
+                    <li class="hero__products">
+                        <a class="hero__products-link hero__link" href="#products">Products</a>
+                    </li>
+                    <li class="hero__about">
+                        <a class="hero__about-link hero__link" href="#about">How it’s made?</a>
+                    </li>
+                </ul>
+            </div>
             <!-- Добавляю фото молока с учетом адаптивности и качесвта для ретины -->
             <div class="bio-information-thumb">
-                <div class="milk">
-                <picture >
+                <div class="picture-milk">
+                <picture>
                     <source srcset="images/desktop/milk.png 1x, images/desktop/milk@2x.png 2x" media="(min-width: 1280px)" type="image/png">
                     <source srcset="images/table/milk.png 1x, images/table/milk@2x.png 2x" media="(min-width: 768px)" type="image/png">
                     <img src="images/table/milk.png" alt="jug of milk">
                 </picture>
                 </div>
-                <div class="bio-information">
-                    <p class="bio-information__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
-                    <button type="button" class="bio-information__button">
-                        <svg width="8" height="8" class="bio-information__icon">
+                <div class="thumb-information">
+                    <p class="thumb-information__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
+                    <button type="button" class="thumb-information__button">
+                        <svg width="8" height="8" class="thumb-information__icon">
                             <use href="images/icons.svg#arrow-right"></use>
                         </svg>
                     </button>
@@ -117,4 +126,5 @@
             </div>
         </div>
     </section>
+    </div>
     </main>

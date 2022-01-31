@@ -44,43 +44,16 @@
     }
   }
 }
-.about__text-generalized {
-  font-family: $font-secondary;
-  font-size: 18px;
-  line-height: 1.17;
-  letter-spacing: $letter-spacing;
-  text-align: center;
-
-  margin-bottom: 15px;
-  color: $clr-brand-darker;
-
-  @media screen and (min-width: 768px) {
-    font-size: 26px;
-    line-height: 1.15;
-  }
-
-  @media screen and (min-width: 1280px) {
-    font-size: 30px;
-    line-height: 1.13;
-  }
-}
 
 .about__title {
   text-align: center;
-  font-family: $font-secondary;
-  letter-spacing: $letter-spacing;
   margin-bottom: 26px;
 
-  color: $clr-accent;
-
   @media screen and (min-width: 768px) {
-    font-size: 48px;
-    line-height: 1.15;
-    margin-bottom: 50px;
+  letter-spacing: $letter-spacing;
+  margin-bottom: 50px;
   }
   @media screen and (min-width: 1280px) {
-    font-size: 58px;
-    line-height: 1.14;
     letter-spacing: 0.06em;
 
     margin-bottom: 55px;
@@ -158,6 +131,11 @@
 .button__svg {
   margin-left: 16px;
 }
+
+.modal__about {
+  transition-duration: 500ms;
+}
+
 .modal__about-title {
   font-family: $font-secondary;
   font-size: 18px;
@@ -167,4 +145,21 @@
 
   margin-bottom: 15px;
   color: $clr-brand-darker;
+}
+
+.modal__about-subtitle {
+  color: $clr-text-darker;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.modal__about-text {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  @media screen and (min-width: 768px){
+    &:not(:last-child) {
+    margin-bottom: 20px;
+    }
+  }
 }
