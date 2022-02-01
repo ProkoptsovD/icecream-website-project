@@ -127,8 +127,8 @@
 }
 
 .header-button {
-  position: absolute;
   min-width: 209px;
+  margin-bottom: 32px;
 
   &:hover,
   &:focus {
@@ -173,15 +173,13 @@
 }
 
 .nav-header {
-  @media screen and (min-width: 1280px) {
-    margin-right: 110px;
+  &-container {
+    @media screen and (min-width: 1280px) {
+      margin-right: 110px;
+    }
   }
 
   &__list {
-    @media screen and (max-width: 1279px) {
-      margin-top: 76px;
-    }
-
     @media screen and (min-width: 1280px) {
       display: flex;
     }
