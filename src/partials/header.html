@@ -21,25 +21,23 @@
         <use href="images/icons.svg#icon-arrow"></use>
       </svg>
     </button>
-
-    <!-- контейнер мобильного меню -->
     <div class="menu-container menu-container--is-hidden">
       <div class="mobile-nav">
-        <!-- Навигация хэддер -->
-        <div class="nav-header-container">
+        <button class="header-button button js-open-modal" type="button" data-modal="Modal">
+          Buy now
+          <svg width="5" height="8">
+            <use href="images/icons.svg#icon-arrow"></use>
+          </svg>
+        </button>
+
+        <div class="nav-header">
           <button class="menu-close" aria-label="close menu" data-modal-close>
             <svg width="14" height="14">
               <use href="images/icons.svg#close"></use>
             </svg>
           </button>
-          <button class="header-button button js-open-modal" type="button" data-modal="Modal">
-            Buy now
-            <!-- стрелка в кнопке -->
-            <svg width="5" height="8">
-              <use href="images/icons.svg#icon-arrow"></use>
-            </svg>
-          </button>
-          <nav class="nav-header">
+
+          <nav>
             <ul class="nav-header__list">
               <li class="nav-header__item">
                 <a href="#home" data-modal-close class="nav-header__link">Home</a>
@@ -59,7 +57,6 @@
             </ul>
           </nav>
         </div>
-        <!-- Кнопка навигации -->
       </div>
     </div>
   </div>

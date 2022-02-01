@@ -67,6 +67,7 @@
 
   @media screen and (min-width: 1280px) {
     display: flex;
+    flex-direction: row-reverse;
     align-items: center;
     justify-content: space-between;
   }
@@ -127,6 +128,7 @@
 
 .header-button {
   min-width: 209px;
+  margin-bottom: 32px;
 
   @media screen and (max-width: 1279px) {
     margin-bottom: 32px;
@@ -137,8 +139,8 @@
     background-color: #ecebeb;
     color: $clr-accent;
   }
-
-  @media screen and (min-width: 300px) and (max-width: 767px) {
+  
+  @media screen and (max-width: 767px) {
     top: 60px;
     right: 0;
 
@@ -158,8 +160,8 @@
   }
 
   @media screen and (min-width: 1280px) {
-    position: relative;
     min-width: 159px;
+    margin-bottom: 0;
 
     & svg {
       margin-left: 12px;
