@@ -118,7 +118,6 @@
 
   @media screen and (min-width: 768px) {
     display: block;
-    margin-right: 24px;
   }
 
   @media screen and (min-width: 1280px) {
@@ -127,8 +126,11 @@
 }
 
 .header-button {
-  position: absolute;
   min-width: 209px;
+
+  @media screen and (max-width: 1279px) {
+    margin-bottom: 32px;
+  }
 
   &:hover,
   &:focus {
@@ -138,7 +140,7 @@
 
   @media screen and (min-width: 300px) and (max-width: 767px) {
     top: 60px;
-    right: 20px;
+    right: 0;
 
     & svg {
       margin-left: 16px;
@@ -147,8 +149,7 @@
 
   @media screen and (min-width: 768px) and (max-width: 1279px) {
     top: 60px;
-    right: 20px;
-    right: 34px;
+    right: 0;
     min-width: 186px;
 
     & svg {
@@ -173,15 +174,19 @@
 }
 
 .nav-header {
-  @media screen and (min-width: 1280px) {
+  @media screen and(min-width: 1280px) {
     margin-right: 110px;
   }
 
-  &__list {
-    @media screen and (max-width: 1279px) {
-      margin-top: 76px;
+  &-container {
+    @media screen and (min-width: 1280px) {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
     }
+  }
 
+  &__list {
     @media screen and (min-width: 1280px) {
       display: flex;
     }
