@@ -499,6 +499,12 @@ body.is-hidden {
   pointer-events: all;
 }
 
+@media screen and (max-height: 600px) {
+  .menu-modal {
+    width: 400px;
+  }
+}
+
 .modal__closeButton {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -590,6 +596,13 @@ body.is-hidden {
   margin-bottom: 5px;
 }
 
+@media screen and (max-height: 600px) {
+  .form__inputTitle {
+    margin-bottom: 0;
+    font-size: 12px;
+  }
+}
+
 .form__input {
   padding: 10px 20px;
   display: block;
@@ -611,6 +624,13 @@ body.is-hidden {
 .form__inputBox:hover .form__input,
 .form__inputBox:focus .form__input {
   border: #e17992 2px solid;
+}
+
+@media screen and (max-height: 600px) {
+  .form__input {
+    margin-bottom: 10px;
+    padding: 3px 9px;
+  }
 }
 
 .form__cityholder {
@@ -645,7 +665,7 @@ body.is-hidden {
   height: 23px;
   border: 2px solid #ffb8ca;
   border-radius: 50%;
-  margin-right: 10px;
+  margin-right: 7px;
 }
 
 @media screen and (min-width: 0px) and (max-width: 350px) {
@@ -653,7 +673,14 @@ body.is-hidden {
     -webkit-box-pack: left;
         -ms-flex-pack: left;
             justify-content: left;
-    font-size: 14px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-height: 600px) {
+  .form__agreement {
+    font-size: 12px;
+    margin-bottom: 15px;
   }
 }
 
@@ -703,7 +730,15 @@ body.is-hidden {
 
 @media screen and (min-width: 0px) and (max-width: 767px) {
   .form__submit {
-    padding: 10px 55px;
+    padding: 8px 50px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-height: 600px) {
+  .form__submit {
+    padding: 5px 25px;
+    font-size: 16px;
   }
 }
 

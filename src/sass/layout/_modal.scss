@@ -27,6 +27,12 @@
   }
 }
 
+.menu-modal {
+  @media screen and (max-height: 600px) {
+    width: 400px;
+  }
+}
+
 .modal__closeButton {
   display: flex;
   justify-content: center;
@@ -113,6 +119,11 @@
   display: block;
   padding-left: 15px;
   margin-bottom: 5px;
+
+  @media screen and (max-height: 600px) {
+    margin-bottom: 0;
+    font-size: 12px;
+  }
 }
 
 .form__input {
@@ -136,6 +147,11 @@
   .form__inputBox:hover &,
   .form__inputBox:focus & {
     border: $clr-brand-the-darkest 2px solid;
+  }
+
+  @media screen and (max-height: 600px) {
+    margin-bottom: 10px;
+    padding: 3px 9px;
   }
 }
 
@@ -166,12 +182,17 @@
     border: 2px solid $clr-brand;
     border-radius: 50%;
 
-    margin-right: 10px;
+    margin-right: 7px;
   }
 
   @media screen and (min-width: 0px) and (max-width: 350px) {
     justify-content: left;
-    font-size: 14px;
+    font-size: 12px;
+  }
+
+  @media screen and (max-height: 600px) {
+    font-size: 12px;
+    margin-bottom: 15px;
   }
 }
 
@@ -218,6 +239,12 @@
   }
 
   @media screen and (min-width: 0px) and (max-width: 767px) {
-    padding: 10px 55px;
+    padding: 8px 50px;
+    font-size: 16px;
+  }
+
+  @media screen and (max-height: 600px) {
+    padding: 5px 25px;
+    font-size: 16px;
   }
 }
