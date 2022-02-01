@@ -67,6 +67,7 @@
 
   @media screen and (min-width: 1280px) {
     display: flex;
+    flex-direction: row-reverse;
     align-items: center;
     justify-content: space-between;
   }
@@ -118,7 +119,6 @@
 
   @media screen and (min-width: 768px) {
     display: block;
-    margin-right: 24px;
   }
 
   @media screen and (min-width: 1280px) {
@@ -127,8 +127,8 @@
 }
 
 .header-button {
-  position: absolute;
   min-width: 209px;
+  margin-bottom: 32px;
 
   &:hover,
   &:focus {
@@ -136,19 +136,13 @@
     color: $clr-accent;
   }
 
-  @media screen and (min-width: 300px) and (max-width: 767px) {
-    top: 60px;
-    right: 20px;
-
+  @media screen and (max-width: 767px) {
     & svg {
       margin-left: 16px;
     }
   }
 
   @media screen and (min-width: 768px) and (max-width: 1279px) {
-    top: 60px;
-    right: 20px;
-    right: 34px;
     min-width: 186px;
 
     & svg {
@@ -157,8 +151,8 @@
   }
 
   @media screen and (min-width: 1280px) {
-    position: relative;
     min-width: 159px;
+    margin-bottom: 0;
 
     & svg {
       margin-left: 12px;
@@ -178,10 +172,6 @@
   }
 
   &__list {
-    @media screen and (max-width: 1279px) {
-      margin-top: 76px;
-    }
-
     @media screen and (min-width: 1280px) {
       display: flex;
     }
