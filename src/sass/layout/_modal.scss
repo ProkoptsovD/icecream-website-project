@@ -62,11 +62,6 @@
   cursor: pointer;
   transition: fill $transition-time $cubic, transform $transition-time $cubic;
 
-  @media screen and (max-width: 767px) {
-    top: 5px;
-    right: 0;
-  }
-
   &:hover,
   &:focus {
     fill: $clr-accent;
